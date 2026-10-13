@@ -1,0 +1,380 @@
+{
+  "name": "Cobalt Group (G0080) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Cobalt Group techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#66ff66",
+      "comment": "DETECTED: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Command Obfuscation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Logon Script (Windows)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Logon Script (Windows)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "DETECTED: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Process Injection",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Process Injection",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Visual Basic",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.007",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: JavaScript",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1068",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation for Privilege Escalation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: File Deletion",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Web Protocols",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1071.004",
+      "tactic": "command-and-control",
+      "color": "#66ff66",
+      "comment": "DETECTED: DNS",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1195.002",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Compromise Software Supply Chain",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious File",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: CMSTP",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Odbcconf",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Regsvr32",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1219",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Remote Access Tools",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1220",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: XSL Script Processing",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1518.001",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Security Software Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "DETECTED: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "privilege-escalation",
+      "color": "#66ff66",
+      "comment": "DETECTED: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1548.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Bypass User Account Control",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1559.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Dynamic Data Exchange",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Attachment",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Protocol Tunneling",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1573.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Asymmetric Cryptography",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Tool",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "7/34 group techniques covered (20.6%) -- 7 direct, 0 roll-up, 27 gap"
+    }
+  ]
+}

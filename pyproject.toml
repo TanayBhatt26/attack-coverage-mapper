@@ -1,0 +1,9 @@
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+markers = [
+  "unit: pure-function tests, no I/O",
+  "integration: multi-module tests (filesystem/SQLite), offline",
+  "network: live downloads (ATT&CK bundle, SigmaHQ) - excluded in CI",
+]
+addopts = "--strict-markers"

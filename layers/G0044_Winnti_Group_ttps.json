@@ -1,0 +1,98 @@
+{
+  "name": "Winnti Group (G0044) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Winnti Group (aliases: Winnti Group, Blackfly). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1014",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Winnti Group: Rootkit",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Winnti Group: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Winnti Group: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Winnti Group: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Winnti Group: Code Signing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Winnti Group: Domains",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Winnti Group",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

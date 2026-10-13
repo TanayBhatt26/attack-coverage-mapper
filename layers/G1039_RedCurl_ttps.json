@@ -1,0 +1,410 @@
+{
+  "name": "RedCurl (G1039) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to RedCurl (aliases: RedCurl). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "RedCurl: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "RedCurl: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1020",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "RedCurl: Automated Exfiltration",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "RedCurl: Obfuscated Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "RedCurl: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1039",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "RedCurl: Data from Network Shared Drive",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "RedCurl: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "RedCurl: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "RedCurl: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "RedCurl: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "RedCurl: GUI Input Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "RedCurl: GUI Input Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "RedCurl: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "RedCurl: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "RedCurl: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.006",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "RedCurl: Python",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "RedCurl: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "RedCurl: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1080",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "RedCurl: Taint Shared Content",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "RedCurl: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "RedCurl: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "RedCurl: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "RedCurl: Domain Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.003",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "RedCurl: Email Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "RedCurl: Web Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "RedCurl: Local Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1119",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "RedCurl: Automated Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1199",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "RedCurl: Trusted Relationship",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1202",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "RedCurl: Indirect Command Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "RedCurl: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "RedCurl: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.011",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "RedCurl: Rundll32",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1537",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "RedCurl: Transfer Data to Cloud Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "RedCurl: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "RedCurl: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "RedCurl: Credentials In Files",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "RedCurl: Credentials in Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1555.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "RedCurl: Credentials from Web Browsers",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "RedCurl: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "RedCurl: Hidden Files and Directories",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "RedCurl: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "RedCurl: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "RedCurl: Symmetric Cryptography",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "RedCurl: Asymmetric Cryptography",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "RedCurl: Malware",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by RedCurl",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

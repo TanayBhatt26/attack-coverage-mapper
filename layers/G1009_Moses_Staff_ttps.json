@@ -1,0 +1,146 @@
+{
+  "name": "Moses Staff (G1009) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Moses Staff (aliases: Moses Staff, DEV-0500, Marigold Sandstorm). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Moses Staff: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Moses Staff: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Moses Staff: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Moses Staff: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Moses Staff: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Moses Staff: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Moses Staff: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Moses Staff: Web Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Moses Staff: Code Signing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Moses Staff: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Moses Staff: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Moses Staff: Windows Host Firewall",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Moses Staff",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

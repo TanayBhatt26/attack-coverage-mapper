@@ -1,0 +1,578 @@
+{
+  "name": "FIN13 (G1016) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to FIN13 (aliases: FIN13, Elephant Beetle). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "FIN13: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "FIN13: Security Account Manager",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "FIN13: NTDS",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN13: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: Internet Connection Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN13: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN13: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN13: SSH",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.006",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN13: Windows Remote Management",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN13: Masquerading",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN13: Masquerade Task or Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN13: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN13: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1049",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: System Network Connections Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN13: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN13: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN13: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN13: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "FIN13: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN13: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN13: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN13: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1069",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: Permission Groups Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN13: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN13: Local Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN13: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN13: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN13: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN13: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: Account Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: Domain Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN13: Internal Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN13: Additional Local or Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN13: Additional Local or Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN13: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN13: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN13: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1134.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN13: Make and Impersonate Token",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1134.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN13: Make and Impersonate Token",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1135",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN13: Network Share Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1136.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN13: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN13: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN13: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN13: Web Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN13: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN13: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1550.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN13: Pass the Hash",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "FIN13: Credentials In Files",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1556",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN13: Modify Authentication Process",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1556",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN13: Modify Authentication Process",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1556",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "FIN13: Modify Authentication Process",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN13: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN13: Hidden Files and Directories",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1565",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "FIN13: Data Manipulation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN13: Protocol Tunneling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN13: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN13: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN13: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN13: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "FIN13: Gather Victim Identity Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1590.004",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "FIN13: Network Topology",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1657",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "FIN13: Financial Theft",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by FIN13",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

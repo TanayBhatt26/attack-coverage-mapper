@@ -1,0 +1,94 @@
+meta:
+  generated: auto-regenerated from live engine run 2026-08-26
+  config_baseline: windows scope, threshold 0.6, config.yaml sources
+  populate_revoked_skip_expected: []
+  closable_by_anchors:
+    T1190:
+    - nginx
+reconnaissance:
+  total_in_scope_windows: 0
+  expected_detectable_ids: []
+  explained_gap_note: no in-scope techniques assigned this tactic
+resource-development:
+  total_in_scope_windows: 0
+  expected_detectable_ids: []
+  explained_gap_note: no in-scope techniques assigned this tactic
+initial-access:
+  total_in_scope_windows: 21
+  expected_detectable_ids:
+  - T1078.003
+  explained_gap_note: ''
+execution:
+  total_in_scope_windows: 43
+  expected_detectable_ids:
+  - T1047
+  - T1053.005
+  - T1059.001
+  - T1059.003
+  - T1569.002
+  explained_gap_note: ''
+persistence:
+  total_in_scope_windows: 80
+  expected_detectable_ids:
+  - T1053.005
+  - T1078.003
+  - T1112
+  - T1136.001
+  - T1543.003
+  explained_gap_note: ''
+privilege-escalation:
+  total_in_scope_windows: 64
+  expected_detectable_ids:
+  - T1053.005
+  - T1078.003
+  - T1543.003
+  explained_gap_note: ''
+defense-evasion:
+  total_in_scope_windows: 162
+  expected_detectable_ids:
+  - T1078.003
+  - T1112
+  - T1685
+  - T1685.005
+  explained_gap_note: ''
+credential-access:
+  total_in_scope_windows: 53
+  expected_detectable_ids:
+  - T1110
+  - T1110.001
+  - T1110.003
+  explained_gap_note: ''
+discovery:
+  total_in_scope_windows: 42
+  expected_detectable_ids:
+  - T1046
+  - T1057
+  - T1082
+  explained_gap_note: ''
+lateral-movement:
+  total_in_scope_windows: 17
+  expected_detectable_ids:
+  - T1021.001
+  - T1021.002
+  explained_gap_note: ''
+collection:
+  total_in_scope_windows: 32
+  expected_detectable_ids: []
+  explained_gap_note: 'explained gap: no mapping rows target this tactic'
+command-and-control:
+  total_in_scope_windows: 45
+  expected_detectable_ids:
+  - T1071.004
+  - T1571
+  explained_gap_note: ''
+exfiltration:
+  total_in_scope_windows: 17
+  expected_detectable_ids:
+  - T1048
+  explained_gap_note: ''
+impact:
+  total_in_scope_windows: 30
+  expected_detectable_ids:
+  - T1496
+  - T1531
+  explained_gap_note: ''

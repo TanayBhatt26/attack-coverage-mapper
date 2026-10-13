@@ -1,0 +1,746 @@
+{
+  "name": "APT29 (G0016) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to APT29 (aliases: APT29, IRON RITUAL, IRON HEMLOCK, NobleBaron, Dark Halo, NOBELIUM, UNC2452, YTTRIUM, The Dukes, Cozy Bear, CozyDuke, SolarStorm, Blue Kitsune, UNC3524, Midnight Blizzard). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT29: Security Account Manager",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.004",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT29: LSA Secrets",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT29: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT29: Internet Connection Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.007",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Binary Padding",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Software Packing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.006",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: HTML Smuggling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1037",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Boot or Logon Initialization Scripts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1037",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Boot or Logon Initialization Scripts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1037.004",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: RC Scripts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1037.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: RC Scripts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT29: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT29: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT29: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.006",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT29: Python",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.009",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud API",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1068",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Exploitation for Privilege Escalation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.006",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Timestomp",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT29: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT29: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.004",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT29: External Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.003",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT29: Multi-hop Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.004",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT29: Domain Fronting",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Additional Email Delegate Permissions",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Additional Email Delegate Permissions",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Device Registration",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Device Registration",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT29: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT29: Password Guessing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT29: Password Spraying",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT29: Remote Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT29: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1136.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT29: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1199",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT29: Trusted Relationship",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT29: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT29: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT29: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Mshta",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Web Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1528",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT29: Steal Application Access Token",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Windows Management Instrumentation Event Subscription",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Windows Management Instrumentation Event Subscription",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Accessibility Features",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Accessibility Features",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1548.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT29: Bypass User Account Control",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1550.003",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT29: Pass the Ticket",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1553.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Mark-of-the-Web Bypass",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1556.007",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Hybrid Identity",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1556.007",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT29: Hybrid Identity",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1556.007",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT29: Hybrid Identity",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT29: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT29: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.003",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT29: Spearphishing via Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1568",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT29: Dynamic Resolution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT29: Encrypted Channel",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.006",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT29: Web Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1586.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT29: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1586.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT29: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT29: Digital Certificates",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT29: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1595.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "APT29: Vulnerability Scanning",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1621",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT29: Multi-Factor Authentication Request Generation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1649",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT29: Steal or Forge Authentication Certificates",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1651",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT29: Cloud Administration Command",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1665",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT29: Hide Infrastructure",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT29: Disable or Modify Cloud Log",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by APT29",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

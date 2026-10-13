@@ -1,0 +1,186 @@
+{
+  "name": "BackdoorDiplomacy (G0135) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to BackdoorDiplomacy (aliases: BackdoorDiplomacy). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1027",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Obfuscated Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Masquerade Task or Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1049",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: System Network Connections Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Dynamic-link Library Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Dynamic-link Library Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Local Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1095",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Non-Application Layer Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1120",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Peripheral Device Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Web Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "BackdoorDiplomacy: Tool",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by BackdoorDiplomacy",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

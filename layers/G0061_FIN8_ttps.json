@@ -1,0 +1,410 @@
+{
+  "name": "FIN8 (G0061) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to FIN8 (aliases: FIN8, Syssphinx). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "FIN8: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN8: Internet Connection Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN8: Remote System Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN8: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN8: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.010",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN8: Command Obfuscation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN8: System Owner/User Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN8: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1048.003",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "FIN8: Exfiltration Over Unencrypted Non-C2 Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN8: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN8: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN8: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN8: Asynchronous Procedure Call",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN8: Asynchronous Procedure Call",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN8: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN8: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1068",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN8: Exploitation for Privilege Escalation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN8: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN8: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN8: Remote Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN8: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN8: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN8: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN8: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN8: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN8: Web Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN8: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN8: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN8: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1134.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN8: Token Impersonation/Theft",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1134.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN8: Token Impersonation/Theft",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN8: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN8: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1482",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN8: Domain Trust Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1486",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "FIN8: Data Encrypted for Impact",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1518.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN8: Security Software Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN8: Windows Management Instrumentation Event Subscription",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN8: Windows Management Instrumentation Event Subscription",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN8: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN8: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN8: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN8: Asymmetric Cryptography",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN8: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN8: Code Signing Certificates",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN8: Clear Windows Event Logs",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by FIN8",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

@@ -1,0 +1,98 @@
+{
+  "name": "Cleaver (G0003) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Cleaver (aliases: Cleaver, Threat Group 2889, TG-2889). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Cleaver: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1557.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Cleaver: ARP Cache Poisoning",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1557.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Cleaver: ARP Cache Poisoning",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Cleaver: Social Media Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Cleaver: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Cleaver: Tool",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Cleaver",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

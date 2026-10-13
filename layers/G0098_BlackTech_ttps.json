@@ -1,0 +1,170 @@
+{
+  "name": "BlackTech (G0098) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to BlackTech (aliases: BlackTech, Palmerworm). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "BlackTech: SSH",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "BlackTech: Right-to-Left Override",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "BlackTech: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1106",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "BlackTech: Native API",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "BlackTech: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "BlackTech: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "BlackTech: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "BlackTech: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "BlackTech: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "BlackTech: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "BlackTech: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "BlackTech: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "BlackTech: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "BlackTech: Code Signing Certificates",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.004",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "BlackTech: Digital Certificates",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by BlackTech",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

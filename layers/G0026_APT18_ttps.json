@@ -1,0 +1,202 @@
+{
+  "name": "APT18 (G0026) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to APT18 (aliases: APT18, TG-0416, Dynamite Panda, Threat Group-0416). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT18: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT18: At",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT18: At",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT18: At",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT18: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT18: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT18: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.004",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT18: DNS",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT18: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT18: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT18: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT18: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT18: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT18: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT18: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT18: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT18: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT18: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT18: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by APT18",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

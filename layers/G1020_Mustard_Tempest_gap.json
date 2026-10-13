@@ -1,0 +1,156 @@
+{
+  "name": "Mustard Tempest (G1020) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mustard Tempest techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "DETECTED: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Drive-by Compromise",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1583.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Server",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1583.008",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Malvertising",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1584.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Domains",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1608.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Upload Malware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1608.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Drive-by Target",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1608.006",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: SEO Poisoning",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "1/12 group techniques covered (8.3%) -- 1 direct, 0 roll-up, 11 gap"
+    }
+  ]
+}

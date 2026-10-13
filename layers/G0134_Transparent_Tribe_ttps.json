@@ -1,0 +1,162 @@
+{
+  "name": "Transparent Tribe (G0134) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Transparent Tribe (aliases: Transparent Tribe, COPPER FIELDSTONE, APT36, Mythic Leopard, ProjectM). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Drive-by Compromise",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Hidden Files and Directories",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1568",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Dynamic Resolution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1608.004",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Transparent Tribe: Drive-by Target",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Transparent Tribe",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

@@ -1,0 +1,290 @@
+{
+  "name": "Darkhotel (G0012) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Darkhotel (aliases: Darkhotel, DUBNIUM, Zigzag Hail). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Darkhotel: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1080",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Taint Shared Content",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Darkhotel: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Darkhotel: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Replication Through Removable Media",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Replication Through Removable Media",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Darkhotel: System Time Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Drive-by Compromise",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Virtualization/Sandbox Evasion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Virtualization/Sandbox Evasion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Darkhotel: System Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Darkhotel: System Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Darkhotel: User Activity Based Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Darkhotel: User Activity Based Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1518.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Security Software Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Code Signing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Darkhotel: Symmetric Cryptography",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Darkhotel",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

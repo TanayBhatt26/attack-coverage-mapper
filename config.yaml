@@ -1,0 +1,37 @@
+# Which platform's techniques are in scope for coverage percentages.
+platform_scope: windows
+
+# A technique counts as "detectable" only at or above this confidence.
+detection_confidence_threshold: 0.6
+
+# Log sources the organization actually collects (operational inventory).
+# Optional: if absent or null, collection status is treated as unknown.
+# If empty list [], inventory is explicitly empty.
+# This is used by the remediation analysis to distinguish between
+# "enable existing source" vs "acquire new source".
+collected_log_sources:
+  - evtx
+  - zeek
+
+# Log sources the simulated team collects. Values must match
+# siem-log-parser's real supported formats. Toggle these in the dashboard
+# sidebar or here; coverage recomputes on change.
+enabled_log_sources:
+  evtx: true            # Windows Event Log (XML/binary)
+  syslog: true          # RFC 5424 / RFC 3164
+  cef: false
+  leef: false
+  json: true            # JSON / NDJSON / ECS / OCSF
+  aws_cloudtrail: true
+  nginx: false
+  zeek: true            # conn/http/dns/notice/weird
+
+# Isolation Forest anomaly detection over parsed LogEvents (future phase).
+# The demo view uses synthetic data; a production deployment would read
+# parsed events from a DB or live parser stream.
+anomaly_detection:
+  enabled: true
+  contamination: 0.05
+  retrain_threshold: 1000
+  random_state: 42
+  model_path: models/isolation_forest.joblib

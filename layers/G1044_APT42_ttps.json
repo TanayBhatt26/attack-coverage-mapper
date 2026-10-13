@@ -1,0 +1,354 @@
+{
+  "name": "APT42 (G1044) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to APT42 (aliases: APT42). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT42: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT42: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT42: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT42: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT42: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT42: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT42: Input Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT42: Input Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT42: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT42: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT42: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT42: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT42: Indicator Removal",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.008",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT42: Clear Mailbox Data",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT42: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT42: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT42: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT42: Web Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1111",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT42: Multi-Factor Authentication Interception",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT42: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT42: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT42: Screen Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1132.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT42: Standard Encoding",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1518.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT42: Security Software Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1530",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT42: Data from Cloud Storage",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1539",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT42: Steal Web Session Cookie",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT42: Boot or Logon Autostart Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT42: Boot or Logon Autostart Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1555.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT42: Credentials from Web Browsers",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT42: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT42: Asymmetric Cryptography",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT42: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT42: Virtual Private Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT42: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT42: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1608.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT42: Upload Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1682",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "APT42: Query Public AI Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1684.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT42: Impersonation",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by APT42",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

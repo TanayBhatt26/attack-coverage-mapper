@@ -1,0 +1,100 @@
+{
+  "name": "RedEcho (G1042) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "RedEcho techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Web Protocols",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1568",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Dynamic Resolution",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1571",
+      "tactic": "command-and-control",
+      "color": "#66ff66",
+      "comment": "DETECTED: Non-Standard Port",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Asymmetric Cryptography",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Domains",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "1/5 group techniques covered (20.0%) -- 1 direct, 0 roll-up, 4 gap"
+    }
+  ]
+}

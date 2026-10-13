@@ -1,0 +1,490 @@
+{
+  "name": "APT3 (G0022) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to APT3 (aliases: APT3, Gothic Panda, Pirpi, UPS Team, Buckeye, Threat Group-0110, TG-0110). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT3: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT3: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT3: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT3: Remote System Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT3: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT3: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT3: Obfuscated Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT3: Software Packing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT3: Indicator Removal from Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT3: System Owner/User Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.010",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT3: Masquerade Account Name",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "APT3: Exfiltration Over C2 Channel",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1049",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT3: System Network Connections Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT3: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT3: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT3: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT3: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT3: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT3: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT3: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT3: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1069",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT3: Permission Groups Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT3: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT3: Local Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT3: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT3: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT3: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT3: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT3: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT3: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT3: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT3: External Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1095",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT3: Non-Application Layer Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT3: Additional Local or Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT3: Additional Local or Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1104",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT3: Multi-Stage Channels",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT3: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT3: Password Cracking",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1136.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT3: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT3: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT3: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.011",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT3: Rundll32",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT3: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT3: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT3: Accessibility Features",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT3: Accessibility Features",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT3: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT3: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT3: Credentials In Files",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1555.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT3: Credentials from Web Browsers",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT3: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT3: Hidden Window",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT3: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT3: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT3: DLL",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by APT3",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

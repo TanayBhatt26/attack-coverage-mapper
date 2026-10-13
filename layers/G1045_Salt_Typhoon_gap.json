@@ -1,0 +1,188 @@
+{
+  "name": "Salt Typhoon (G1045) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Salt Typhoon techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: SSH",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Network Sniffing",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Network Sniffing",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1048.003",
+      "tactic": "exfiltration",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Exfiltration Over Unencrypted Non-C2 Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.004",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: SSH Authorized Keys",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: SSH Authorized Keys",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1110.002",
+      "tactic": "credential-access",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Password Cracking",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1136",
+      "tactic": "persistence",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Create Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Protocol Tunneling",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Malware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Tool",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1590.004",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Network Topology",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1602.002",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Network Device Configuration Dump",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1685.006",
+      "tactic": "defense-evasion",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Clear Linux or Mac System Logs",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Disable or Modify System Firewall",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "4/14 group techniques covered (28.6%) -- 0 direct, 4 roll-up, 10 gap"
+    }
+  ]
+}

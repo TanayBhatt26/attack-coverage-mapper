@@ -1,0 +1,234 @@
+{
+  "name": "APT1 (G0006) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to APT1 (aliases: APT1, Comment Crew, Comment Group, Comment Panda). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT1: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT1: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1007",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT1: System Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT1: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT1: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT1: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1049",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT1: System Network Connections Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT1: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT1: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT1: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT1: Local Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT1: Remote Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1119",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT1: Automated Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1135",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT1: Network Share Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1550.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT1: Pass the Hash",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT1: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT1: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT1: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT1: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT1: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT1: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT1: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT1: Tool",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by APT1",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

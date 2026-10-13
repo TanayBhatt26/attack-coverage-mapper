@@ -1,0 +1,930 @@
+{
+  "name": "APT28 (G0007) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to APT28 (aliases: APT28, IRON TWILIGHT, SNAKEMACKEREL, Swallowtail, Group 74, Sednit, Sofacy, Pawn Storm, Fancy Bear, STRONTIUM, Tsar Team, Threat Group-4127, TG-4127, Forest Blizzard, FROZENLAKE, GruesomeLarch). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1001.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT28: Junk Data",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: OS Credential Dumping",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: NTDS",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1014",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Rootkit",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT28: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1025",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Data from Removable Media",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1030",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "APT28: Data Transfer Size Limits",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Masquerading",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1037.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: Logon Script (Windows)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1037.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT28: Logon Script (Windows)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1039",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Data from Network Shared Drive",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: Network Sniffing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT28: Network Sniffing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1048.002",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "APT28: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT28: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT28: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT28: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1068",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT28: Exploitation for Privilege Escalation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.006",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Timestomp",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT28: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.003",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT28: Mail Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Local Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Remote Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT28: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT28: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT28: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT28: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT28: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT28: External Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.003",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT28: Multi-hop Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT28: Replication Through Removable Media",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT28: Replication Through Removable Media",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1092",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT28: Communication Through Removable Media",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: Additional Email Delegate Permissions",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT28: Additional Email Delegate Permissions",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT28: Bidirectional Communication",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT28: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: Brute Force",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: Password Guessing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: Password Spraying",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Screen Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Remote Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1119",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Automated Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1120",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "APT28: Peripheral Device Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT28: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1134.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Token Impersonation/Theft",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1134.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT28: Token Impersonation/Theft",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1137.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: Office Test",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT28: Drive-by Compromise",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT28: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1199",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT28: Trusted Relationship",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT28: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT28: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT28: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1210",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT28: Exploitation of Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1211",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Exploitation for Stealth",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1213",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Data from Information Repositories",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1213.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Sharepoint",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.011",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Rundll32",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1221",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Template Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1498",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "APT28: Network Denial of Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: Web Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1528",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: Steal Application Access Token",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1542.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Bootkit",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1542.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: Bootkit",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.015",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT28: Component Object Model Hijacking",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.015",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: Component Object Model Hijacking",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "APT28: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "APT28: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1550.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT28: Application Access Token",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1550.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "APT28: Pass the Hash",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1557.004",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "APT28: Evil Twin",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1557.004",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Evil Twin",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1559.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "APT28: Dynamic Data Exchange",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Archive Collected Data",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "APT28: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Hidden Files and Directories",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Hidden Window",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT28: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1567",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "APT28: Exfiltration Over Web Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "APT28: Symmetric Cryptography",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT28: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT28: Virtual Private Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.006",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT28: Web Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.008",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT28: Network Devices",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1586.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT28: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT28: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.007",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "APT28: Artificial Intelligence",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589.001",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "APT28: Credentials",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "APT28: Gather Victim Org Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1595.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "APT28: Vulnerability Scanning",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1596",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "APT28: Search Open Technical Databases",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1598",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "APT28: Phishing for Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1598.003",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "APT28: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1669",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "APT28: Wi-Fi Networks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1684.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Impersonation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "APT28: Clear Windows Event Logs",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by APT28",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

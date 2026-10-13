@@ -1,0 +1,322 @@
+{
+  "name": "Storm-1811 (G1046) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Storm-1811 (aliases: Storm-1811). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Storm-1811: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Storm-1811: SSH",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Storm-1811: System Owner/User Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Masquerading",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.010",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Masquerade Account Name",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1048.002",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Input Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Input Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Storm-1811: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Local Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Domain Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1219.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Remote Desktop Software",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1222.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Windows Permissions",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1482",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Domain Trust Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1486",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Data Encrypted for Impact",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.003",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Spearphishing via Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.004",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Spearphishing Voice",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1570",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Lateral Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Storm-1811: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Storm-1811: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1667",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Email Bombing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1684.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Storm-1811: Impersonation",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Storm-1811",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

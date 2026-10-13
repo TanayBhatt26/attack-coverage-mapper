@@ -1,0 +1,778 @@
+{
+  "name": "Magic Hound (G0059) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Magic Hound (aliases: Magic Hound, TA453, COBALT ILLUSION, Charming Kitten, ITG18, Phosphorus, Newscaster, APT35, Mint Sandstorm). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Magic Hound: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Internet Connection Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Wi-Fi Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Remote System Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.010",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Command Obfuscation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: System Owner/User Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Masquerade Task or Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.010",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Masquerade Account Name",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1049",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: System Network Connections Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Magic Hound: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Clear Command History",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Application Layer Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.003",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Email Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Additional Email Delegate Permissions",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Additional Email Delegate Permissions",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Additional Local or Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Additional Local or Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Bidirectional Communication",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Screen Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Local Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Remote Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1136.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Drive-by Compromise",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.011",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Rundll32",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1482",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Domain Trust Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1486",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Data Encrypted for Impact",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Web Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Hidden Window",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.003",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Spearphishing via Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1567",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Exfiltration Over Web Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1570",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Lateral Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1571",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Non-Standard Port",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Protocol Tunneling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Encrypted Channel",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.006",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Web Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Social Media Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1586.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Gather Victim Identity Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589.001",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Credentials",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Email Addresses",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1590.005",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Magic Hound: IP Addresses",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591.001",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Determine Physical Locations",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1592.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Software",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1595.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Vulnerability Scanning",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1598.003",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Disable or Modify Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Disable or Modify Windows Event Log",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Magic Hound: Windows Host Firewall",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Magic Hound",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

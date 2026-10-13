@@ -1,0 +1,418 @@
+{
+  "name": "MirrorFace (G1054) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to MirrorFace (aliases: MirrorFace, Earth Kasha). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "MirrorFace: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Security Account Manager",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "MirrorFace: NTDS",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1007",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: System Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Remote System Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "MirrorFace: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: System Owner/User Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.008",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Masquerade File Type",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1048.002",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "MirrorFace: File Transfer Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Remote Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Domain Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Local Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1221",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Template Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1482",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Domain Trust Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Code Signing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1556.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Password Filter DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1556.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Password Filter DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1556.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Password Filter DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "MirrorFace: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Gather Victim Org Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1614.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "MirrorFace: System Language Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1684.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Impersonation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Disable or Modify Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Clear Windows Event Logs",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "MirrorFace: Windows Host Firewall",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by MirrorFace",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

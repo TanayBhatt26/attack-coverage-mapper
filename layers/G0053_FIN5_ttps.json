@@ -1,0 +1,170 @@
+{
+  "name": "FIN5 (G0053) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to FIN5 (aliases: FIN5). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN5: Remote System Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN5: Command and Scripting Interpreter",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN5: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN5: Local Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN5: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN5: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN5: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN5: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN5: External Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "FIN5: Brute Force",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1119",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN5: Automated Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN5: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN5: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN5: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN5: Clear Windows Event Logs",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by FIN5",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

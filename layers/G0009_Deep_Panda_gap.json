@@ -1,0 +1,148 @@
+{
+  "name": "Deep Panda (G0009) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Deep Panda techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Remote System Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#66ff66",
+      "comment": "DETECTED: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Indicator Removal from Tools",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "DETECTED: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Regsvr32",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Web Shell",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Accessibility Features",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Accessibility Features",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Hidden Window",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "4/10 group techniques covered (40.0%) -- 4 direct, 0 roll-up, 6 gap"
+    }
+  ]
+}

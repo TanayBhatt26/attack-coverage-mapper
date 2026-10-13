@@ -1,0 +1,218 @@
+{
+  "name": "Gorgon Group (G0078) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Gorgon Group (aliases: Gorgon Group). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1055.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Portable Executable Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Portable Executable Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.012",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Process Hollowing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.012",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Process Hollowing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1106",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Native API",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.009",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Shortcut Modification",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.009",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Shortcut Modification",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Hidden Window",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Gorgon Group: Disable or Modify Tools",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Gorgon Group",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

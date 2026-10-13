@@ -1,0 +1,540 @@
+{
+  "name": "Leviathan (G0065) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Leviathan techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: OS Credential Dumping",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: LSASS Memory",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#66ff66",
+      "comment": "DETECTED: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: SSH",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Binary Padding",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Steganography",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.015",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Compression",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "GAP: Exfiltration Over C2 Channel",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Dynamic-link Library Injection",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Dynamic-link Library Injection",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Visual Basic",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Local Data Staging",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1074.002",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Remote Data Staging",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.003",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Multi-hop Proxy",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1102.003",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: One-Way Communication",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: External Remote Services",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: External Remote Services",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Drive-by Compromise",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1197",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: BITS Jobs",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1197",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: BITS Jobs",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1197",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: BITS Jobs",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious File",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Regsvr32",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Web Shell",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1534",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: Internal Spearphishing",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Windows Management Instrumentation Event Subscription",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Windows Management Instrumentation Event Subscription",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.009",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Shortcut Modification",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.009",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Shortcut Modification",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Code Signing",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1559.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Dynamic Data Exchange",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Archive Collected Data",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Attachment",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1567.002",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "GAP: Exfiltration to Cloud Storage",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Protocol Tunneling",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Domains",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1584.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Server",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1584.008",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Network Devices",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1585.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Social Media Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1585.002",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Email Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1586.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Social Media Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1586.002",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Email Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1587.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Exploits",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1589.001",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Credentials",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1595.002",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Vulnerability Scanning",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "4/50 group techniques covered (8.0%) -- 3 direct, 1 roll-up, 46 gap"
+    }
+  ]
+}

@@ -1,0 +1,690 @@
+{
+  "name": "FIN7 (G0046) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to FIN7 (aliases: FIN7, GOLD NIAGARA, ITG14, Carbon Spider, ELBRUS, Sangria Tempest). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN7: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1008",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN7: Fallback Channels",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN7: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN7: SSH",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.005",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN7: VNC",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.010",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Command Obfuscation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.016",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Junk Code Insertion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN7: System Owner/User Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Masquerade Task or Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN7: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN7: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN7: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Command and Scripting Interpreter",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.007",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: JavaScript",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1069.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN7: Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.004",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN7: DNS",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN7: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN7: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN7: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN7: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN7: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN7: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN7: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN7: Domain Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN7: Replication Through Removable Media",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN7: Replication Through Removable Media",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN7: Bidirectional Communication",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN7: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN7: Screen Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN7: System Time Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1125",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "FIN7: Video Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN7: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1195.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN7: Compromise Software Supply Chain",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1210",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "FIN7: Exploitation of Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Mshta",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.011",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Rundll32",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1219",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN7: Remote Access Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1486",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "FIN7: Data Encrypted for Impact",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: User Activity Based Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "FIN7: User Activity Based Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN7: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN7: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.011",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN7: Application Shimming",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.011",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN7: Application Shimming",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "FIN7: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "FIN7: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Code Signing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1558.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "FIN7: Kerberoasting",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1559.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Dynamic Data Exchange",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Hidden Files and Directories",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Hidden Window",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN7: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "FIN7: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1567.002",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "FIN7: Exfiltration to Cloud Storage",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1569.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Service Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1571",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN7: Non-Standard Port",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "FIN7: Protocol Tunneling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN7: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.006",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN7: Web Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN7: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN7: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "FIN7: Gather Victim Org Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591.004",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "FIN7: Identify Roles",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1608.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN7: Upload Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1608.004",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN7: Drive-by Target",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1608.005",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "FIN7: Link Target",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1620",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Reflective Code Loading",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1674",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "FIN7: Input Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "FIN7: Disable or Modify System Firewall",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by FIN7",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

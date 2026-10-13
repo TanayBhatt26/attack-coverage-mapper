@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Environment & secrets
+.env
+docker/secrets/
+
+# Local databases
+db/*.db
+db/*.sqlite*
+
+# ATT&CK / Sigma data caches (large, re-downloadable)
+data/attack_stix/
+data/sigma/
+
+# Sigma conversion cache (keyed by rule sha256 + backend + pipeline; safe to
+# delete and regenerate — invalidated on SigmaHQ HEAD change per Wave 1).
+data/cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

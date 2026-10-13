@@ -1,0 +1,212 @@
+{
+  "name": "CURIUM (G1012) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "CURIUM techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Data from Local System",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "GAP: Exfiltration Over C2 Channel",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1048.002",
+      "tactic": "exfiltration",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "DETECTED: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: System Time Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Drive-by Compromise",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious File",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Web Shell",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Attachment",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.003",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing via Service",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Domains",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1583.003",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Virtual Private Server",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1583.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Server",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1584.006",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Web Services",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1585.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Social Media Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1585.002",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Email Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1598.003",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1608.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Drive-by Target",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "3/19 group techniques covered (15.8%) -- 2 direct, 1 roll-up, 16 gap"
+    }
+  ]
+}

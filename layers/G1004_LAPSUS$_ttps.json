@@ -1,0 +1,458 @@
+{
+  "name": "LAPSUS$ (G1004) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to LAPSUS$ (aliases: LAPSUS$, DEV-0537, Strawberry Tempest). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: NTDS",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.006",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: DCSync",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1068",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Exploitation for Privilege Escalation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1069.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Domain Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Additional Cloud Roles",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Additional Cloud Roles",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1111",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Multi-Factor Authentication Interception",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.003",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Email Forwarding Rule",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1136.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Cloud Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1199",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Trusted Relationship",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: User Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1213.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Confluence",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1213.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Sharepoint",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1213.003",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Code Repositories",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1213.005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Messaging Applications",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1485",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Data Destruction",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1489",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Service Stop",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1531",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Account Access Removal",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.008",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Chat Messages",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1555.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Credentials from Web Browsers",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1555.005",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Password Managers",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1578.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Create Cloud Instance",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1578.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Delete Cloud Instance",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Virtual Private Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: DNS Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1586.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Gather Victim Identity Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589.001",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Credentials",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Email Addresses",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Business Relationships",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591.004",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Identify Roles",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1593.003",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Code Repositories",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1597.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Purchase Technical Data",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1598.004",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Spearphishing Voice",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1621",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Multi-Factor Authentication Request Generation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1684.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "LAPSUS$: Impersonation",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by LAPSUS$",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

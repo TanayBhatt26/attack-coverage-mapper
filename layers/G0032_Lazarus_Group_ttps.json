@@ -1,0 +1,922 @@
+{
+  "name": "Lazarus Group (G0032) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Lazarus Group (aliases: Lazarus Group, Labyrinth Chollima, HIDDEN COBRA, Guardians of Peace, ZINC, NICKEL ACADEMY, Diamond Sleet). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1001.003",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Protocol or Service Impersonation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1008",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Fallback Channels",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1010",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Application Window Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1012",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Query Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: SSH",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.007",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Dynamic API Resolution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.009",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Embedded Payloads",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: System Owner/User Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Rename Legitimate Utilities",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Masquerade Task or Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Exfiltration Over C2 Channel",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1048.003",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Exfiltration Over Unencrypted Non-C2 Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1049",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: System Network Connections Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Dynamic-link Library Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Dynamic-link Library Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Indicator Removal",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Clear Command History",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.006",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Timestomp",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Local Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Internal Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: External Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Account Manipulation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Account Manipulation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Bidirectional Communication",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1104",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Multi-Stage Channels",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1106",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Native API",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Password Spraying",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: System Time Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1132.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Standard Encoding",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1134.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Create Process with Token",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1134.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Create Process with Token",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Drive-by Compromise",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1202",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Indirect Command Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: System Binary Proxy Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Mshta",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.011",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Rundll32",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1485",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Data Destruction",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1489",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Service Stop",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1491.001",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Internal Defacement",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1529",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: System Shutdown/Reboot",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1542.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Bootkit",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1542.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Bootkit",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.009",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Shortcut Modification",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.009",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Shortcut Modification",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Code Signing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1557.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Name Resolution Poisoning and SMB Relay",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1557.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Name Resolution Poisoning and SMB Relay",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Archive Collected Data",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Archive via Library",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.003",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Archive via Custom Method",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1561.001",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Disk Content Wipe",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1561.002",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Disk Structure Wipe",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Hidden Files and Directories",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.003",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Spearphishing via Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1571",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Non-Standard Port",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Symmetric Cryptography",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: KernelCallbackTable",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.013",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: KernelCallbackTable",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.006",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Web Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.004",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Social Media Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.004",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Digital Certificates",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Email Addresses",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Gather Victim Org Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1620",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Reflective Code Loading",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1680",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Local Storage Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Disable or Modify Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Lazarus Group: Windows Host Firewall",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Lazarus Group",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: attack-coverage-postgres
+    environment:
+      POSTGRES_DB: attack_coverage
+      POSTGRES_USER: attack_mapper
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - attack_coverage_pgdata:/var/lib/postgresql/data
+      - ./docker/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U attack_mapper -d attack_coverage"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    secrets:
+      - pg_password
+      - pg_app_password
+
+volumes:
+  attack_coverage_pgdata:
+
+secrets:
+  pg_password:
+    file: ./docker/secrets/pg_password.txt
+  pg_app_password:
+    file: ./docker/secrets/pg_app_password.txt

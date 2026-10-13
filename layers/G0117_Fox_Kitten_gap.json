@@ -1,0 +1,436 @@
+{
+  "name": "Fox Kitten (G0117) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Fox Kitten techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: LSASS Memory",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1003.003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: NTDS",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Data from Local System",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1012",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Query Registry",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Remote System Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#66ff66",
+      "comment": "DETECTED: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#66ff66",
+      "comment": "DETECTED: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: SSH",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.005",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: VNC",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Command Obfuscation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Masquerade Task or Service",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1039",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Data from Network Shared Drive",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "DETECTED: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059",
+      "tactic": "execution",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Command and Scripting Interpreter",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: File and Directory Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1087.001",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Local Account",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Domain Account",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1090",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Proxy",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1102",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Web Service",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1110",
+      "tactic": "credential-access",
+      "color": "#66ff66",
+      "comment": "DETECTED: Brute Force",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1136.001",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "DETECTED: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1210",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation of Remote Services",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1213.005",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Messaging Applications",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1217",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Browser Information Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Web Shell",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1530",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Data from Cloud Storage",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Accessibility Features",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Accessibility Features",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1552.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Credentials In Files",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1555.005",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Password Managers",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Archive via Utility",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Protocol Tunneling",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1585",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Establish Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1585.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Social Media Accounts",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "10/41 group techniques covered (24.4%) -- 8 direct, 2 roll-up, 31 gap"
+    }
+  ]
+}

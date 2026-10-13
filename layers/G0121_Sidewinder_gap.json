@@ -1,0 +1,316 @@
+{
+  "name": "Sidewinder (G0121) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Sidewinder techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1020",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "GAP: Automated Exfiltration",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Command Obfuscation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: System Owner/User Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "DETECTED: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Visual Basic",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.007",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: JavaScript",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Web Protocols",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Local Data Staging",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "DETECTED: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: File and Directory Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1119",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Automated Collection",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: System Time Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious File",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Mshta",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1518",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Software Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1518.001",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Security Software Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1559.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Dynamic Data Exchange",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Attachment",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: DLL",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: DLL",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1598.002",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Attachment",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1598.003",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Link",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "3/30 group techniques covered (10.0%) -- 3 direct, 0 roll-up, 27 gap"
+    }
+  ]
+}

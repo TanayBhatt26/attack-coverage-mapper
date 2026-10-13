@@ -1,0 +1,482 @@
+{
+  "name": "Ember Bear (G1003) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Ember Bear (aliases: Ember Bear, UNC2589, Bleeding Bear, DEV-0586, Cadet Blizzard, Frozenvista, UAC-0056). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: OS Credential Dumping",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Security Account Manager",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.004",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: LSA Secrets",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Remote System Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Masquerading",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Ember Bear: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Ember Bear: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.004",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Ember Bear: DNS",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Default Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.003",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Multi-hop Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1095",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Non-Application Layer Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Brute Force",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Password Spraying",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1119",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Automated Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1125",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Video Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Ember Bear: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1195",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Supply Chain Compromise",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1210",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Exploitation of Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1491.002",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Ember Bear: External Defacement",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Web Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1550.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Pass the Hash",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Credentials In Files",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Archive Collected Data",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1561.002",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Disk Structure Wipe",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1567.002",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Exfiltration to Cloud Storage",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1570",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Lateral Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1571",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Non-Standard Port",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Protocol Tunneling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Acquire Infrastructure",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Virtual Private Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Establish Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.005",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Exploits",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1595.001",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Scanning IP Blocks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1595.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Vulnerability Scanning",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1654",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Ember Bear: Log Enumeration",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Ember Bear",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

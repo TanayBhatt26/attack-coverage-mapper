@@ -1,0 +1,556 @@
+{
+  "name": "UNC3886 (G1048) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "UNC3886 techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: LSASS Memory",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1008",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Fallback Channels",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1014",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Rootkit",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: SSH",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Indicator Removal from Tools",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Masquerade Task or Service",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Boot or Logon Initialization Scripts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Boot or Logon Initialization Scripts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037.004",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: RC Scripts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: RC Scripts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Network Sniffing",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Network Sniffing",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "DETECTED: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.004",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Unix Shell",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.006",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Python",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.012",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Hypervisor CLI",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1068",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation for Privilege Escalation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: File Deletion",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.006",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Timestomp",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.007",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Clear Network Connection History and Configurations",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Local Data Staging",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Default Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Default Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Default Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Default Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: File and Directory Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1095",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Non-Application Layer Protocol",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: System Time Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Traffic Signaling",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Traffic Signaling",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Traffic Signaling",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Port Knocking",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Port Knocking",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Port Knocking",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1212",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation for Credential Access",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.011",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Rundll32",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.006",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: vSphere Installation Bundles",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1548",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Abuse Elevation Control Mechanism",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1554",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Compromise Host Software Binary",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1555.005",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Password Managers",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Archive via Utility",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560.003",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Archive via Custom Method",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.011",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Ignore Process Interrupts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1570",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: Lateral Tool Transfer",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Malware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1587.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Exploits",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Malware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Digital Certificates",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1673",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Virtual Machine Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1675",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: ESXi Administration Command",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1681",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Search Threat Vendor Data",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#66ff66",
+      "comment": "DETECTED: Disable or Modify Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Disable or Modify System Firewall",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1690",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Prevent Command History Logging",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "5/49 group techniques covered (10.2%) -- 4 direct, 1 roll-up, 44 gap"
+    }
+  ]
+}

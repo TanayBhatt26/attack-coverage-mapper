@@ -1,0 +1,778 @@
+{
+  "name": "Volt Typhoon (G1017) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Volt Typhoon (aliases: Volt Typhoon, BRONZE SILHOUETTE, Vanguard Panda, DEV-0391, UNC3236, Voltzite, Insidious Taurus, DazedToad). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1003.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: NTDS",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1006",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Direct Volume Access",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1007",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: System Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1010",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Application Window Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1012",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Query Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Internet Connection Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Remote System Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Software Packing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: System Owner/User Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.008",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Masquerade File Type",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Network Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1049",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: System Network Connections Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.004",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Unix Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1068",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Exploitation for Privilege Escalation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1069",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Permission Groups Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1069.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Local Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1069.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.007",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Clear Network Connection History and Configurations",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Data Staged",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Local Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Domain Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Internal Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.003",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Multi-hop Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Screen Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1120",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Peripheral Device Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: System Time Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1217",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Browser Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: System Binary Proxy Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: System Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: System Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Web Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1518",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Software Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Unsecured Credentials",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.004",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Private Keys",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1555",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Credentials from Password Stores",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1555.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Credentials from Web Browsers",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1570",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Lateral Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Symmetric Cryptography",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Virtual Private Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.004",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.005",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Botnet",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.008",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Network Devices",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.004",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Exploits",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.006",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Vulnerabilities",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Gather Victim Identity Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Email Addresses",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1590",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Gather Victim Network Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1590.004",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Network Topology",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1590.006",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Network Security Appliances",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Gather Victim Org Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591.004",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Identify Roles",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1592",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Gather Victim Host Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1593",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Search Open Websites/Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1594",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Search Victim-Owned Websites",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1596.005",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Scan Databases",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1614",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: System Location Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1654",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Log Enumeration",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1680",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Local Storage Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Volt Typhoon: Clear Windows Event Logs",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Volt Typhoon",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

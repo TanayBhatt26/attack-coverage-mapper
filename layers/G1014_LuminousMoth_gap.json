@@ -1,0 +1,340 @@
+{
+  "name": "LuminousMoth (G1014) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "LuminousMoth techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Data from Local System",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1030",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "GAP: Data Transfer Size Limits",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: System Owner/User Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "GAP: Exfiltration Over C2 Channel",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Web Protocols",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: File and Directory Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: Replication Through Removable Media",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Replication Through Removable Media",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "color": "#66ff66",
+      "comment": "DETECTED: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "DETECTED: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1539",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Steal Web Session Cookie",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Code Signing",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557.002",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: ARP Cache Poisoning",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557.002",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: ARP Cache Poisoning",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Archive Collected Data",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Hidden Files and Directories",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1567.002",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "GAP: Exfiltration to Cloud Storage",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: DLL",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: DLL",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Malware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Malware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Tool",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Digital Certificates",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1608.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Upload Malware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1608.004",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Drive-by Target",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1608.005",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Link Target",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "2/28 group techniques covered (7.1%) -- 2 direct, 0 roll-up, 26 gap"
+    }
+  ]
+}

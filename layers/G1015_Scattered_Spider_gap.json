@@ -1,0 +1,692 @@
+{
+  "name": "Scattered Spider (G1015) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Scattered Spider techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: NTDS",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1006",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Direct Volume Access",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Remote System Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#66ff66",
+      "comment": "DETECTED: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.004",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: SSH",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.007",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: Cloud Services",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "GAP: Exfiltration Over C2 Channel",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.004",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Unix Shell",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1068",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation for Privilege Escalation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1069",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Permission Groups Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1069.002",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Domain Groups",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Clear Mailbox Data",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1074",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Data Staged",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Cloud Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Cloud Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Cloud Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Cloud Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "DETECTED: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: File and Directory Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1087",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Account Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Domain Account",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1090",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Proxy",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Account Manipulation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Account Manipulation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Additional Cloud Roles",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Additional Cloud Roles",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1114",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Email Collection",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1114.003",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Email Forwarding Rule",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: External Remote Services",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: External Remote Services",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1136",
+      "tactic": "persistence",
+      "color": "#ffa64d",
+      "comment": "ROLLUP: Create Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: User Execution",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1213.003",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Code Repositories",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1213.005",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Messaging Applications",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1217",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Browser Information Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1219.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Remote Desktop Software",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1484.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Trust Modification",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1484.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Trust Modification",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1486",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "GAP: Data Encrypted for Impact",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1490",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "GAP: Inhibit System Recovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1530",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Data from Cloud Storage",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1538",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Cloud Service Dashboard",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1539",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Steal Web Session Cookie",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1543.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Systemd Service",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1543.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Systemd Service",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1552.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Credentials In Files",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1552.004",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Private Keys",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Code Signing",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1555.005",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Password Managers",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.006",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Multi-Factor Authentication",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.006",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Multi-Factor Authentication",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.006",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Multi-Factor Authentication",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.009",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Conditional Access Policies",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.009",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Conditional Access Policies",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.009",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Conditional Access Policies",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Email Hiding Rules",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1567.002",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "GAP: Exfiltration to Cloud Storage",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Protocol Tunneling",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1578.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Create Cloud Instance",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1580",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Cloud Infrastructure Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Domains",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1585.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Social Media Accounts",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.001",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Malware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Tool",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1589",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Gather Victim Identity Information",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1598",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Phishing for Information",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1598.003",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Link",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1598.004",
+      "tactic": "reconnaissance",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Voice",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1621",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: Multi-Factor Authentication Request Generation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1657",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "GAP: Financial Theft",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1684.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Impersonation",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#66ff66",
+      "comment": "DETECTED: Disable or Modify Tools",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "6/64 group techniques covered (9.4%) -- 4 direct, 2 roll-up, 58 gap"
+    }
+  ]
+}

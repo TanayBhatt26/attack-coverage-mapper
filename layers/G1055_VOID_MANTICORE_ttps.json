@@ -1,0 +1,666 @@
+{
+  "name": "VOID MANTICORE (G1055) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to VOID MANTICORE (aliases: VOID MANTICORE, COBALT MYSTIQUE, Handala Hack, Homeland Justice, Karma, Karmabelow80, BANISHED KITTEN, Red Sandstorm). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.015",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Compression",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Masquerade Task or Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Exfiltration Over C2 Channel",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.006",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Python",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1072",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Software Deployment Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1072",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Software Deployment Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Data Staged",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Valid Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Domain Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.004",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Cloud Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Domain Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Account Manipulation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Account Manipulation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Web Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Brute Force",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Password Guessing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.004",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Credential Stuffing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Screen Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Remote Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1119",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Automated Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1123",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Audio Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1125",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Video Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1199",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Trusted Relationship",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1213.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Sharepoint",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1219.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Remote Desktop Software",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1484.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Group Policy Modification",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1484.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Group Policy Modification",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1485",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Data Destruction",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1486",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Data Encrypted for Impact",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1490",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Inhibit System Recovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.002",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Credentials in Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1561.001",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Disk Content Wipe",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1561.002",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Disk Structure Wipe",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Hidden Window",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Phishing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Protocol Tunneling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Virtual Private Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.004",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.006",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Web Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Social Media Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Gather Victim Identity Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1595.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Vulnerability Scanning",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1651",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Cloud Administration Command",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1657",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Financial Theft",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1679",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Selective Exclusion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1684.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Impersonation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "VOID MANTICORE: Windows Host Firewall",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by VOID MANTICORE",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

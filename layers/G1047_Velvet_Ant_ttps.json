@@ -1,0 +1,290 @@
+{
+  "name": "Velvet Ant (G1047) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Velvet Ant (aliases: Velvet Ant). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: SMB/Windows Admin Shares",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1037.004",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: RC Scripts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1037.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: RC Scripts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Network Sniffing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Network Sniffing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Windows Management Instrumentation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1049",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: System Network Connections Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Process Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Process Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.004",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Unix Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Application Layer Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1090.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Internal Proxy",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1132",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Data Encoding",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1211",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Exploitation for Stealth",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1569.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Service Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1570",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Lateral Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1571",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Non-Standard Port",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1573.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Asymmetric Cryptography",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: DLL",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Disable or Modify Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Velvet Ant: Disable or Modify System Firewall",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Velvet Ant",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

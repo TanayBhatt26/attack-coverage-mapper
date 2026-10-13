@@ -1,0 +1,1258 @@
+{
+  "name": "Kimsuky (G0094) TTP Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques attributed to Kimsuky (aliases: Kimsuky, Black Banshee, Velvet Chollima, Emerald Sleet, THALLIUM, APT43, TA427, Springtail, Earth Kumiho, PatheticSlug). Generated from the ATT&CK Coverage Mapper database.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: LSASS Memory",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Data from Local System",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1007",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: System Service Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1012",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Query Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: System Network Configuration Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1020",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Automated Exfiltration",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Remote Desktop Protocol",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Obfuscated Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Binary Padding",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Software Packing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.007",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Dynamic API Resolution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.010",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Command Obfuscation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.012",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: LNK Icon Smuggling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Encrypted/Encoded File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.015",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Compression",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1027.016",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Junk Code Insertion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: System Owner/User Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Masquerade Task or Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1036.007",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Double File Extension",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Network Sniffing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Network Sniffing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Exfiltration Over C2 Channel",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Process Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Process Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Dynamic-link Library Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Dynamic-link Library Injection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.012",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Process Hollowing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055.012",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Process Hollowing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Keylogging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.003",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Web Portal Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1056.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Web Portal Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Process Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Visual Basic",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.006",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Python",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.007",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: JavaScript",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: File Deletion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1070.006",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Timestomp",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Web Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: File Transfer Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.003",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Mail Protocols",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Local Data Staging",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Local Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: System Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: File and Directory Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Additional Local or Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Additional Local or Domain Groups",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102.001",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Dead Drop Resolver",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1102.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Bidirectional Communication",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1106",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Native API",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1111",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Multi-Factor Authentication Interception",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Modify Registry",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Screen Capture",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.002",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Remote Email Collection",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1114.003",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Email Forwarding Rule",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1115",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Clipboard Data",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: System Time Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1132.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Non-Standard Encoding",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: External Remote Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1136.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Local Account",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1176.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Browser Extensions",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1185",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Browser Session Hijacking",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Exploit Public-Facing Application",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Malicious Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Malicious File",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1204.004",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Malicious Copy and Paste",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1205",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Traffic Signaling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1205",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Traffic Signaling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1205",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Traffic Signaling",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1217",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Browser Information Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.005",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Mshta",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.010",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Regsvr32",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1218.011",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Rundll32",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1219.002",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Remote Desktop Software",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1480.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Mutual Exclusion",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1489",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Service Stop",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: System Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1497.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: System Checks",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Web Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1518.001",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Security Software Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1534",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Internal Spearphishing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1539",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Steal Web Session Cookie",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Windows Service",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Change Default File Association",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Change Default File Association",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1550.002",
+      "tactic": "lateral-movement",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Pass the Hash",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.001",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Credentials In Files",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1552.004",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Private Keys",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Code Signing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1555.003",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Credentials from Web Browsers",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1557",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Adversary-in-the-Middle",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1557",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Adversary-in-the-Middle",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1559.001",
+      "tactic": "execution",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Component Object Model",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Archive via Utility",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1560.003",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Archive via Custom Method",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.002",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Hidden Users",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.003",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Hidden Window",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1564.011",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Ignore Process Interrupts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Phishing",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Spearphishing Attachment",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1567.002",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Exfiltration to Cloud Storage",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1568",
+      "tactic": "command-and-control",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Dynamic Resolution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Acquire Infrastructure",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.004",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Server",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1583.006",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Web Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1584.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Domains",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Establish Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Social Media Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1585.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1586.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Email Accounts",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Develop Capabilities",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1587.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Tool",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.003",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Code Signing Certificates",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1588.005",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Exploits",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Email Addresses",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1589.003",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Employee Names",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1591",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Gather Victim Org Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1593.001",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Social Media",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1593.002",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Search Engines",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1594",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Search Victim-Owned Websites",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1596",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Search Open Technical Databases",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1598",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Phishing for Information",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1598.003",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Spearphishing Link",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1608.001",
+      "tactic": "resource-development",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Upload Malware",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1620",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Reflective Code Loading",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1657",
+      "tactic": "impact",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Financial Theft",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1678",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Delay Execution",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1680",
+      "tactic": "discovery",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Local Storage Discovery",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1682",
+      "tactic": "reconnaissance",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Query Public AI Services",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1684.001",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Impersonation",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Disable or Modify Tools",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686",
+      "tactic": "defense-evasion",
+      "color": "#ff6666",
+      "comment": "Kimsuky: Disable or Modify System Firewall",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ff6666"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Used by Kimsuky",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Not observed",
+      "color": "#ffffff"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

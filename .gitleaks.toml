@@ -1,0 +1,15 @@
+# Gitleaks config — allowlist third-party venv, build artifacts, and generated files
+[allowlist]
+  paths = [
+    '''\.venv''',
+    '''\.pytest_cache''',
+    '''__pycache__''',
+    '''\.git''',
+    '''node_modules''',
+    '''db/coverage\.db''',
+    '''layers/.*\.json''',
+    '''atomic-test-results/.*''',
+    '''tools/''',
+    '''siem-log-parser-main\.zip''',
+    '''\.venv/Lib/site-packages.*''',
+  ]

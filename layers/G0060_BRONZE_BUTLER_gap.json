@@ -1,0 +1,428 @@
+{
+  "name": "BRONZE BUTLER (G0060) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "BRONZE BUTLER techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GAP: LSASS Memory",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Data from Local System",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1007",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: System Service Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Remote System Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Binary Padding",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Steganography",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Masquerading",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Right-to-Left Override",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Match Legitimate Resource Name or Location",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1039",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Data from Network Shared Drive",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: At",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: At",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: At",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#66ff66",
+      "comment": "DETECTED: Scheduled Task",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: PowerShell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "DETECTED: Windows Command Shell",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Visual Basic",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.006",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Python",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: File Deletion",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Web Protocols",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1080",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: Taint Shared Content",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: File and Directory Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Domain Account",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1102.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Dead Drop Resolver",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Ingress Tool Transfer",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Screen Capture",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: System Time Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1132.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Standard Encoding",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Deobfuscate/Decode Files or Information",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Drive-by Compromise",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Exploitation for Client Execution",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: Malicious File",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1518",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Software Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Registry Run Keys / Startup Folder",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1548.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "GAP: Bypass User Account Control",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1550.003",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "GAP: Pass the Ticket",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GAP: Archive via Utility",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "GAP: Spearphishing Attachment",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1573.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "GAP: Symmetric Cryptography",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: DLL",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "GAP: DLL",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1588.002",
+      "tactic": "resource-development",
+      "color": "#ff3333",
+      "comment": "GAP: Tool",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#66ff66",
+      "comment": "DETECTED: Disable or Modify Tools",
+      "enabled": true,
+      "score": 100
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "4/40 group techniques covered (10.0%) -- 4 direct, 0 roll-up, 36 gap"
+    }
+  ]
+}

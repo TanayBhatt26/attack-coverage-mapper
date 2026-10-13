@@ -1,0 +1,26 @@
+# Core stack (spec §5.2)
+# All dependencies pinned to exact versions to prevent supply-chain attacks
+# and ensure reproducible installs. See README.md "Attribution" for licenses.
+sqlalchemy==2.0.52
+psycopg[binary]==3.3.4
+pandas==3.0.5
+numpy==2.4.6
+scikit-learn==1.9.0
+streamlit==1.62.0
+plotly==7.0.0
+pyyaml==6.0.3
+python-dotenv==1.1.0
+pytest==9.1.1
+
+# ATT&CK data access (spec §3.2)
+mitreattack-python==6.2.0
+
+# Sigma rule conversion (spec §3.3)
+# Pinned to the versions Phase 5 Wave 2 was built/verified against (pySigma
+# 1.5.0 API: SigmaRule.from_yaml, SplunkBackend(processing_pipeline=...)).
+sigma-cli==3.1.0
+pysigma==1.5.0
+pysigma-backend-splunk==2.1.0
+
+# Jupyter notebooks (analysis write-ups)
+jupyterlab==4.4.1

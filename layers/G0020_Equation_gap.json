@@ -1,0 +1,100 @@
+{
+  "name": "Equation (G0020) Detection Gap Analysis",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Equation techniques vs. our detection coverage. Green = detectable, red = gap, orange = covered only via parent/child roll-up. Config: platform scope + threshold from config.yaml.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1120",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "GAP: Peripheral Device Discovery",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1480.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Environmental Keying",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Component Firmware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "GAP: Component Firmware",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "GAP: Hidden File System",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detected via parent/child roll-up",
+      "color": "#ffa64d"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "metadata": [
+    {
+      "name": "coverage",
+      "value": "0/4 group techniques covered (0.0%) -- 0 direct, 0 roll-up, 4 gap"
+    }
+  ]
+}

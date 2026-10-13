@@ -1,0 +1,4898 @@
+{
+  "name": "ATT&CK Coverage Mapper - Detection Coverage",
+  "versions": {
+    "attack": "16.1",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "All in-scope alive techniques colored by detection coverage. Green = detectable at/above the configured threshold, red = undetected (gap).",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Data Obfuscation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1001.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Junk Data (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1001.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Steganography (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1001.003",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Protocol or Service Impersonation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "OS Credential Dumping (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "LSASS Memory (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1003.002",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Security Account Manager (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1003.003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "NTDS (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1003.004",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "LSA Secrets (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1003.005",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Cached Domain Credentials (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1003.006",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "DCSync (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Data from Local System (best confidence 0.4)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1006",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Direct Volume Access (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1007",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "System Service Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1008",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Fallback Channels (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1010",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Application Window Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1011",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration Over Other Network Medium (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1011.001",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration Over Bluetooth (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1012",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Query Registry (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1014",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Rootkit (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1016",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "System Network Configuration Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1016.001",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Internet Connection Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1016.002",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Wi-Fi Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Remote System Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1020",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Automated Exfiltration (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Remote Services (best confidence 0.14)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "color": "#66ff66",
+      "comment": "Remote Desktop Protocol (best confidence 0.6)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "color": "#66ff66",
+      "comment": "SMB/Windows Admin Shares (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1021.003",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Distributed Component Object Model (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.005",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "VNC (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1021.006",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Windows Remote Management (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1025",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Data from Removable Media (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Obfuscated Files or Information (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Binary Padding (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Software Packing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Steganography (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Compile After Delivery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Indicator Removal from Tools (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.006",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "HTML Smuggling (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.007",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Dynamic API Resolution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Stripped Payloads (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.009",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Embedded Payloads (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Command Obfuscation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.011",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Fileless Storage (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.012",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "LNK Icon Smuggling (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.013",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Encrypted/Encoded File (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.014",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Polymorphic Code (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.015",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Compression (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.016",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Junk Code Insertion (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.017",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "SVG Smuggling (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1027.018",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Invisible Unicode (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1029",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Scheduled Transfer (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1030",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Data Transfer Size Limits (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "System Owner/User Discovery (best confidence 0.55)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Masquerading (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Invalid Code Signature (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Right-to-Left Override (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Rename Legitimate Utilities (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Masquerade Task or Service (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Match Legitimate Resource Name or Location (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.007",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Double File Extension (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Masquerade File Type (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Masquerade Account Name (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1036.012",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Browser Fingerprint (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Boot or Logon Initialization Scripts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Boot or Logon Initialization Scripts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Logon Script (Windows) (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Logon Script (Windows) (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Network Logon Script (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1037.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Network Logon Script (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1039",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Data from Network Shared Drive (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Network Sniffing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1040",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Network Sniffing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration Over C2 Channel (best confidence 0.18)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1046",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "Network Service Discovery (best confidence 0.68)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "Windows Management Instrumentation (best confidence 0.7)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1048",
+      "tactic": "exfiltration",
+      "color": "#66ff66",
+      "comment": "Exfiltration Over Alternative Protocol (best confidence 0.7)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1048.001",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration Over Symmetric Encrypted Non-C2 Protocol (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1048.002",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration Over Asymmetric Encrypted Non-C2 Protocol (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1048.003",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration Over Unencrypted Non-C2 Protocol (best confidence 0.55)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1049",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "System Network Connections Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1052",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration Over Physical Medium (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1052.001",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration over USB (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Scheduled Task/Job (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Scheduled Task/Job (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Scheduled Task/Job (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "At (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "At (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "At (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "Scheduled Task (best confidence 0.75)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "Scheduled Task (best confidence 0.75)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "color": "#66ff66",
+      "comment": "Scheduled Task (best confidence 0.75)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1055",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Process Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Process Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Dynamic-link Library Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Dynamic-link Library Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Portable Executable Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Portable Executable Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Thread Execution Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Thread Execution Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Asynchronous Procedure Call (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Asynchronous Procedure Call (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Thread Local Storage (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Thread Local Storage (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.011",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Extra Window Memory Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.011",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Extra Window Memory Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.012",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Process Hollowing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.012",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Process Hollowing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.013",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Process Doppelgänging (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.013",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Process Doppelgänging (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.015",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "ListPlanting (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1055.015",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "ListPlanting (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Input Capture (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Input Capture (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Keylogging (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Keylogging (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056.002",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "GUI Input Capture (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056.002",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "GUI Input Capture (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056.003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Web Portal Capture (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056.003",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Web Portal Capture (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056.004",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Credential API Hooking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1056.004",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Credential API Hooking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "Process Discovery (best confidence 0.6)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Command and Scripting Interpreter (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "PowerShell (best confidence 0.75)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "Windows Command Shell (best confidence 0.7)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1059.005",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Visual Basic (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.006",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Python (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.007",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "JavaScript (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.010",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "AutoHotKey & AutoIT (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1059.011",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Lua (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1068",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Exploitation for Privilege Escalation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1069",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Permission Groups Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1069.001",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Local Groups (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1069.002",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Domain Groups (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Indicator Removal (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Clear Command History (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "File Deletion (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Network Share Connection Removal (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.006",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Timestomp (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.007",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Clear Network Connection History and Configurations (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Clear Mailbox Data (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.009",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Clear Persistence (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1070.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Relocate Malware (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1071",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Application Layer Protocol (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Web Protocols (best confidence 0.14)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1071.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "File Transfer Protocols (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1071.003",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Mail Protocols (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1071.004",
+      "tactic": "command-and-control",
+      "color": "#66ff66",
+      "comment": "DNS (best confidence 0.65)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1071.005",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Publish/Subscribe Protocols (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1072",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Software Deployment Tools (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1072",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Software Deployment Tools (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1074",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Data Staged (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Local Data Staging (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1074.002",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Remote Data Staging (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Valid Accounts (best confidence 0.55)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Valid Accounts (best confidence 0.55)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Valid Accounts (best confidence 0.55)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Valid Accounts (best confidence 0.55)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Default Accounts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Default Accounts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Default Accounts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Default Accounts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Domain Accounts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Domain Accounts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Domain Accounts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Domain Accounts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "initial-access",
+      "color": "#66ff66",
+      "comment": "Local Accounts (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "Local Accounts (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "privilege-escalation",
+      "color": "#66ff66",
+      "comment": "Local Accounts (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1078.003",
+      "tactic": "defense-evasion",
+      "color": "#66ff66",
+      "comment": "Local Accounts (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1080",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Taint Shared Content (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "color": "#66ff66",
+      "comment": "System Information Discovery (best confidence 0.65)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "File and Directory Discovery (best confidence 0.3)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1087",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Account Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1087.001",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Local Account (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Domain Account (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1087.003",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Email Account (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1090",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Proxy (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1090.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Internal Proxy (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1090.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "External Proxy (best confidence 0.5)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1090.003",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Multi-hop Proxy (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1090.004",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Domain Fronting (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Replication Through Removable Media (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1091",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Replication Through Removable Media (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1092",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Communication Through Removable Media (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1095",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Non-Application Layer Protocol (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Account Manipulation (best confidence 0.47)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Account Manipulation (best confidence 0.47)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Additional Email Delegate Permissions (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Additional Email Delegate Permissions (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098.005",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Device Registration (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Device Registration (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Additional Local or Domain Groups (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1098.007",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Additional Local or Domain Groups (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1102",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Web Service (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1102.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Dead Drop Resolver (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1102.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Bidirectional Communication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1102.003",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "One-Way Communication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1104",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Multi-Stage Channels (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Ingress Tool Transfer (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1106",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Native API (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1110",
+      "tactic": "credential-access",
+      "color": "#66ff66",
+      "comment": "Brute Force (best confidence 0.7)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.001",
+      "tactic": "credential-access",
+      "color": "#66ff66",
+      "comment": "Password Guessing (best confidence 0.77)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.002",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Password Cracking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1110.003",
+      "tactic": "credential-access",
+      "color": "#66ff66",
+      "comment": "Password Spraying (best confidence 0.8)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1110.004",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Credential Stuffing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1111",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Multi-Factor Authentication Interception (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "Modify Registry (best confidence 0.7)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "color": "#66ff66",
+      "comment": "Modify Registry (best confidence 0.7)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Screen Capture (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1114",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Email Collection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1114.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Local Email Collection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1114.002",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Remote Email Collection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1114.003",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Email Forwarding Rule (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1115",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Clipboard Data (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1119",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Automated Collection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1120",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Peripheral Device Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1123",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Audio Capture (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "System Time Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1125",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Video Capture (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1127",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Trusted Developer Utilities Proxy Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1127",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Trusted Developer Utilities Proxy Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1127.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "MSBuild (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1127.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "MSBuild (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1127.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "ClickOnce (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1127.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "ClickOnce (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1127.003",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "JamPlus (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1127.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "JamPlus (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1129",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Shared Modules (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1132",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Data Encoding (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1132.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Standard Encoding (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1132.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Non-Standard Encoding (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "External Remote Services (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1133",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "External Remote Services (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Access Token Manipulation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Access Token Manipulation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Token Impersonation/Theft (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Token Impersonation/Theft (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Create Process with Token (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Create Process with Token (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Make and Impersonate Token (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Make and Impersonate Token (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Parent PID Spoofing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Parent PID Spoofing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "SID-History Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1134.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "SID-History Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1135",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Network Share Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1136",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Create Account (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1136.001",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "Local Account (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1136.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Domain Account (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1137",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Office Application Startup (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1137.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Office Template Macros (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1137.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Office Test (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1137.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Outlook Forms (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1137.004",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Outlook Home Page (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1137.005",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Outlook Rules (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1137.006",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Add-ins (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Deobfuscate/Decode Files or Information (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1176",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Software Extensions (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1176.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Browser Extensions (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1176.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "IDE Extensions (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1185",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Browser Session Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1187",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Forced Authentication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1189",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Drive-by Compromise (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Exploit Public-Facing Application (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1195",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Supply Chain Compromise (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1195.001",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Compromise Software Dependencies and Development Tools (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1195.002",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Compromise Software Supply Chain (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1195.003",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Compromise Hardware Supply Chain (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1197",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "BITS Jobs (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1197",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "BITS Jobs (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1197",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "BITS Jobs (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1199",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Trusted Relationship (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1200",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Hardware Additions (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1201",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Password Policy Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1202",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Indirect Command Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1203",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Exploitation for Client Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "User Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Malicious Link (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Malicious File (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.004",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Malicious Copy and Paste (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1204.005",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Malicious Library (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Traffic Signaling (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Traffic Signaling (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Traffic Signaling (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Port Knocking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Port Knocking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Port Knocking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Socket Filters (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Socket Filters (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1205.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Socket Filters (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1207",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Rogue Domain Controller (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1210",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Exploitation of Remote Services (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1211",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Exploitation for Stealth (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1212",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Exploitation for Credential Access (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1213",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Data from Information Repositories (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1213.002",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Sharepoint (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1213.006",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Databases (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1216",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "System Script Proxy Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1216.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "PubPrn (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1216.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "SyncAppvPublishingServer (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1217",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Browser Information Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "System Binary Proxy Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Compiled HTML File (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Control Panel (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "CMSTP (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "InstallUtil (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Mshta (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.007",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Msiexec (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Odbcconf (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.009",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Regsvcs/Regasm (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Regsvr32 (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.011",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Rundll32 (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.012",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Verclsid (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.013",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Mavinject (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.014",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "MMC (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1218.015",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Electron Applications (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1219",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Remote Access Tools (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1219.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "IDE Tunneling (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1219.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Remote Desktop Software (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1219.003",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Remote Access Hardware (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1220",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "XSL Script Processing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1221",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Template Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1222",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "File and Directory Permissions Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1222.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Windows Permissions (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1480",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Execution Guardrails (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1480.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Environmental Keying (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1480.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Mutual Exclusion (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1482",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Domain Trust Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1484",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Domain or Tenant Policy Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1484",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Domain or Tenant Policy Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1484.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Group Policy Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1484.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Group Policy Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1484.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Trust Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1484.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Trust Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1485",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Data Destruction (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1486",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Data Encrypted for Impact (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1489",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Service Stop (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1490",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Inhibit System Recovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1491",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Defacement (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1491.001",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Internal Defacement (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1491.002",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "External Defacement (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1495",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Firmware Corruption (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1496",
+      "tactic": "impact",
+      "color": "#66ff66",
+      "comment": "Resource Hijacking (best confidence 0.7)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1496.001",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Compute Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1496.002",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Bandwidth Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1497",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Virtualization/Sandbox Evasion (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1497",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Virtualization/Sandbox Evasion (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1497.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "System Checks (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1497.001",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "System Checks (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1497.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "User Activity Based Checks (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1497.002",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "User Activity Based Checks (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1497.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Time Based Checks (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1497.003",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Time Based Checks (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1498",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Network Denial of Service (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1498.001",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Direct Network Flood (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1498.002",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Reflection Amplification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1499",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Endpoint Denial of Service (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1499.001",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "OS Exhaustion Flood (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1499.002",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Service Exhaustion Flood (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1499.003",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Application Exhaustion Flood (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1499.004",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Application or System Exploitation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Server Software Component (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "SQL Stored Procedures (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Transport Agent (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Web Shell (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.004",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "IIS Components (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1505.005",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Terminal Services DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1518",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Software Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1518.001",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Security Software Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1518.002",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Backup Software Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1529",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "System Shutdown/Reboot (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1531",
+      "tactic": "impact",
+      "color": "#66ff66",
+      "comment": "Account Access Removal (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1534",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Internal Spearphishing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1539",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Steal Web Session Cookie (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Pre-OS Boot (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Pre-OS Boot (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "System Firmware (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "System Firmware (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Component Firmware (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Component Firmware (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Bootkit (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1542.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Bootkit (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1543",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Create or Modify System Process (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1543",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Create or Modify System Process (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "persistence",
+      "color": "#66ff66",
+      "comment": "Windows Service (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "privilege-escalation",
+      "color": "#66ff66",
+      "comment": "Windows Service (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1546",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Event Triggered Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Event Triggered Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Change Default File Association (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Change Default File Association (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Screensaver (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Screensaver (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Windows Management Instrumentation Event Subscription (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Windows Management Instrumentation Event Subscription (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.007",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Netsh Helper DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.007",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Netsh Helper DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Accessibility Features (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.008",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Accessibility Features (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.009",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "AppCert DLLs (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.009",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "AppCert DLLs (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.010",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "AppInit DLLs (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.010",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "AppInit DLLs (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.011",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Application Shimming (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.011",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Application Shimming (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.012",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Image File Execution Options Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.012",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Image File Execution Options Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.013",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "PowerShell Profile (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.013",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "PowerShell Profile (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.015",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Component Object Model Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.015",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Component Object Model Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.016",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Installer Packages (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.016",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Installer Packages (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.018",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Python Startup Hooks (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1546.018",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Python Startup Hooks (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Boot or Logon Autostart Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Boot or Logon Autostart Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Registry Run Keys / Startup Folder (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Registry Run Keys / Startup Folder (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Authentication Package (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Authentication Package (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.003",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Time Providers (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.003",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Time Providers (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.004",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Winlogon Helper DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.004",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Winlogon Helper DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.005",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Security Support Provider (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.005",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Security Support Provider (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.008",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "LSASS Driver (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.008",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "LSASS Driver (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.009",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Shortcut Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.009",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Shortcut Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.010",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Port Monitors (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.010",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Port Monitors (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.012",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Print Processors (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.012",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Print Processors (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.014",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Active Setup (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1547.014",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Active Setup (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1548",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Abuse Elevation Control Mechanism (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1548.002",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Bypass User Account Control (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1550",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Use Alternate Authentication Material (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1550.002",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Pass the Hash (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1550.003",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Pass the Ticket (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1552",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Unsecured Credentials (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1552.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Credentials In Files (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1552.002",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Credentials in Registry (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1552.003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Shell History (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1552.004",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Private Keys (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1552.006",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Group Policy Preferences (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1553",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Subvert Trust Controls (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Code Signing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1553.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "SIP and Trust Provider Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1553.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Install Root Certificate (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1553.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Mark-of-the-Web Bypass (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1553.006",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Code Signing Policy Modification (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1554",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Compromise Host Software Binary (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1555",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Credentials from Password Stores (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1555.003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Credentials from Web Browsers (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1555.004",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Windows Credential Manager (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1555.005",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Password Managers (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Modify Authentication Process (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Modify Authentication Process (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Modify Authentication Process (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.001",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Domain Controller Authentication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Domain Controller Authentication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Domain Controller Authentication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.002",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Password Filter DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Password Filter DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.002",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Password Filter DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.005",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Reversible Encryption (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Reversible Encryption (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.005",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Reversible Encryption (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.006",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Multi-Factor Authentication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.006",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Multi-Factor Authentication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.006",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Multi-Factor Authentication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.007",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Hybrid Identity (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.007",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Hybrid Identity (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.007",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Hybrid Identity (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.008",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Network Provider DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Network Provider DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1556.008",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Network Provider DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Adversary-in-the-Middle (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Adversary-in-the-Middle (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Name Resolution Poisoning and SMB Relay (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Name Resolution Poisoning and SMB Relay (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557.002",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "ARP Cache Poisoning (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557.002",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "ARP Cache Poisoning (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557.003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "DHCP Spoofing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1557.003",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "DHCP Spoofing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1558",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Steal or Forge Kerberos Tickets (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1558.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Golden Ticket (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1558.002",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Silver Ticket (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1558.003",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Kerberoasting (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1558.004",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "AS-REP Roasting (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1559",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Inter-Process Communication (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1559.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Component Object Model (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1559.002",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Dynamic Data Exchange (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Archive Collected Data (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Archive via Utility (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560.002",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Archive via Library (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1560.003",
+      "tactic": "collection",
+      "color": "#ff3333",
+      "comment": "Archive via Custom Method (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1561",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Disk Wipe (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1561.001",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Disk Content Wipe (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1561.002",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Disk Structure Wipe (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1563",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Remote Service Session Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1563.002",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "RDP Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Hide Artifacts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Hidden Files and Directories (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Hidden Users (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Hidden Window (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.004",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "NTFS File Attributes (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Hidden File System (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.006",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Run Virtual Instance (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.007",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "VBA Stomping (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Email Hiding Rules (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Process Argument Spoofing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.011",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Ignore Process Interrupts (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1564.012",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "File/Path Exclusions (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1565",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Data Manipulation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1565.001",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Stored Data Manipulation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1565.002",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Transmitted Data Manipulation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1565.003",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Runtime Data Manipulation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Phishing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Spearphishing Attachment (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Spearphishing Link (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.003",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Spearphishing via Service (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1566.004",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Spearphishing Voice (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1567",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration Over Web Service (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1567.001",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration to Code Repository (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1567.002",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration to Cloud Storage (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1567.003",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration to Text Storage Sites (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1567.004",
+      "tactic": "exfiltration",
+      "color": "#ff3333",
+      "comment": "Exfiltration Over Webhook (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1568",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Dynamic Resolution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1568.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Fast Flux DNS (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1568.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Domain Generation Algorithms (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1568.003",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "DNS Calculation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1569",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "System Services (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1569.002",
+      "tactic": "execution",
+      "color": "#66ff66",
+      "comment": "Service Execution (best confidence 0.7)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1570",
+      "tactic": "lateral-movement",
+      "color": "#ff3333",
+      "comment": "Lateral Tool Transfer (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1571",
+      "tactic": "command-and-control",
+      "color": "#66ff66",
+      "comment": "Non-Standard Port (best confidence 0.65)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1572",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Protocol Tunneling (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1573",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Encrypted Channel (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1573.001",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Symmetric Cryptography (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1573.002",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Asymmetric Cryptography (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Hijack Execution Flow (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Hijack Execution Flow (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "DLL (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.005",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Executable Installer File Permissions Weakness (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.005",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Executable Installer File Permissions Weakness (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.007",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Path Interception by PATH Environment Variable (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.007",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Path Interception by PATH Environment Variable (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.008",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Path Interception by Search Order Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.008",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Path Interception by Search Order Hijacking (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.009",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Path Interception by Unquoted Path (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.009",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Path Interception by Unquoted Path (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.010",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Services File Permissions Weakness (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.010",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Services File Permissions Weakness (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.011",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Services Registry Permissions Weakness (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.011",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Services Registry Permissions Weakness (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.012",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "COR_PROFILER (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.012",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "COR_PROFILER (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.013",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "KernelCallbackTable (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.013",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "KernelCallbackTable (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.014",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "AppDomainManager (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1574.014",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "AppDomainManager (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1606",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Forge Web Credentials (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1606.001",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Web Cookies (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1606.002",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "SAML Tokens (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1611",
+      "tactic": "privilege-escalation",
+      "color": "#ff3333",
+      "comment": "Escape to Host (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1614",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "System Location Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1614.001",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "System Language Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1615",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Group Policy Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1620",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Reflective Code Loading (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1621",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Multi-Factor Authentication Request Generation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1622",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Debugger Evasion (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1622",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Debugger Evasion (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1649",
+      "tactic": "credential-access",
+      "color": "#ff3333",
+      "comment": "Steal or Forge Authentication Certificates (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1652",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Device Driver Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1653",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Power Settings (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1654",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Log Enumeration (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1657",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Financial Theft (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1659",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Content Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1659",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Content Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1665",
+      "tactic": "command-and-control",
+      "color": "#ff3333",
+      "comment": "Hide Infrastructure (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1667",
+      "tactic": "impact",
+      "color": "#ff3333",
+      "comment": "Email Bombing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1668",
+      "tactic": "persistence",
+      "color": "#ff3333",
+      "comment": "Exclusive Control (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1669",
+      "tactic": "initial-access",
+      "color": "#ff3333",
+      "comment": "Wi-Fi Networks (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1673",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Virtual Machine Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1674",
+      "tactic": "execution",
+      "color": "#ff3333",
+      "comment": "Input Injection (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1678",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Delay Execution (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1679",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Selective Exclusion (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1680",
+      "tactic": "discovery",
+      "color": "#ff3333",
+      "comment": "Local Storage Discovery (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1684",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Social Engineering (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1684.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Impersonation (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1684.002",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Email Spoofing (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1685",
+      "tactic": "defense-evasion",
+      "color": "#66ff66",
+      "comment": "Disable or Modify Tools (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1685.001",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Disable or Modify Windows Event Log (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1685.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Modify or Spoof Tool UI (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1685.005",
+      "tactic": "defense-evasion",
+      "color": "#66ff66",
+      "comment": "Clear Windows Event Logs (best confidence 0.85)",
+      "enabled": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1686",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Disable or Modify System Firewall (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1686.003",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Windows Host Firewall (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1687",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Exploitation for Defense Impairment (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1688",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Safe Mode Boot (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1689",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Downgrade Attack (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    },
+    {
+      "techniqueID": "T1690",
+      "tactic": "defense-evasion",
+      "color": "#ff3333",
+      "comment": "Prevent Command History Logging (best confidence 0.0)",
+      "enabled": true,
+      "score": 0
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ff3333",
+      "#66ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Detected",
+      "color": "#66ff66"
+    },
+    {
+      "label": "Detection gap",
+      "color": "#ff3333"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}
