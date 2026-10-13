@@ -9,11 +9,11 @@ scikit-learn==1.9.0
 streamlit==1.62.0
 plotly==7.0.0
 pyyaml==6.0.3
-python-dotenv==1.1.0
+python-dotenv==1.2.4
 pytest==9.1.1
 
 # ATT&CK data access (spec §3.2)
-mitreattack-python==6.2.0
+mitreattack-python==6.3.0
 
 # Sigma rule conversion (spec §3.3)
 # Pinned to the versions Phase 5 Wave 2 was built/verified against (pySigma
@@ -22,5 +22,10 @@ sigma-cli==3.1.0
 pysigma==1.5.0
 pysigma-backend-splunk==2.1.0
 
-# Jupyter notebooks (analysis write-ups)
-jupyterlab==4.4.1
+# Jupyter notebooks (analysis write-ups) - fixed CVEs
+jupyterlab==4.6.4
+
+# Runtime dependencies with security fixes
+python-dotenv==1.2.4
+urllib3==2.8.0
+diskcache==5.6.3
