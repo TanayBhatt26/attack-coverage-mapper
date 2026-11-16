@@ -16,7 +16,7 @@ from typing import Any
 
 # Entry-point path bootstrap so `database`/`src` resolve when Streamlit runs
 # this file directly (acceptable here; library modules never do this).
-SRC = Path(__file__).resolve().parents[1]
+SRC = Path(__file__).resolve().parents[2]
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
