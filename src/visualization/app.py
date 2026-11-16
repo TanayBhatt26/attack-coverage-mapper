@@ -7,6 +7,8 @@ selected page.
 
 Run from repo root:  streamlit run src/visualization/app.py
 """
+from __future__ import annotations
+
 import contextlib
 import sys
 from pathlib import Path
@@ -24,17 +26,19 @@ from sqlalchemy.orm import Session, sessionmaker  # noqa: E402
 
 from database.session import database_url, make_engine  # noqa: E402
 from src.config_loader import load_config  # noqa: E402
+from src.visualization.views.styles import inject_css  # noqa: E402
 
 CONFIG_PATH = str(Path(__file__).resolve().parents[2] / "config.yaml")
 
 st.set_page_config(page_title="ATT&CK Coverage Mapper", layout="wide")
 
-st.title("ATT&CK Coverage Mapper")
+# Inject shared CSS
+inject_css()
 
 
 @st.cache_resource
 def get_engine(url: str):
-    # Validate URL scheme to prevent cache poisoning via malicious .env
+    """Validate URL scheme and create engine."""
     from sqlalchemy.engine import make_url
     try:
         parsed = make_url(url)
@@ -79,16 +83,20 @@ def _write_config(config: dict[str, Any]) -> bool:
         return False
 
 
-# --- Config sidebar ---
-# The sidebar is the single cross-cutting surface: toggling a log source is the
-# key demo beat ("toggle source -> coverage responds").  We render checkboxes
-# into a copy of the live config; on change we write back to config.yaml, which
-# Streamlit picks up on the next rerun.
+# ---------------------------------------------------------------------------
+# Sidebar navigation & config
+# ---------------------------------------------------------------------------
+# The sidebar has two clearly separated sections:
+#   1. Page navigation (top) -- prominent radio buttons
+#   2. Log-source configuration (bottom, inside an expander) -- toggling a
+#      source is the key demo beat ("toggle source -> coverage responds").
+#      Toggles write back to config.yaml, which Streamlit picks up on the next
+#      rerun.
 # ---
 
 
-def _render_config_sidebar(config: dict[str, Any]) -> dict[str, Any]:
-    """Render enablement checkboxes; return the (possibly mutated) config.
+def _render_config_section(config: dict[str, Any]) -> dict[str, Any]:
+    """Render log-source enablement checkboxes inside a sidebar expander.
 
     Reads ``enabled_log_sources`` from *config* and writes the user's toggles
     back to ``config.yaml`` via :func:`_write_config`.  Scope and threshold are
@@ -100,32 +108,32 @@ def _render_config_sidebar(config: dict[str, Any]) -> dict[str, Any]:
     Returns:
         The config dict reflecting the latest sidebar state.
     """
-    st.sidebar.header("Configuration")
+    with st.sidebar.expander("Configuration", expanded=False):
+        st.caption("Log sources included in coverage calculation")
 
-    sources = dict(config.get("enabled_log_sources", {}))
-    changed = False
-    for fmt in sorted(sources):
-        default = bool(sources.get(fmt, True))
-        now = st.sidebar.checkbox(
-            fmt, value=default, key=f"src_{fmt}"
-        )
-        if now != default:
-            sources[fmt] = now
-            changed = True
+        sources = dict(config.get("enabled_log_sources", {}))
+        changed = False
+        for fmt in sorted(sources):
+            default = bool(sources.get(fmt, True))
+            now = st.checkbox(
+                fmt, value=default, key=f"src_{fmt}"
+            )
+            if now != default:
+                sources[fmt] = now
+                changed = True
 
-    scope = config.get("platform_scope", "all")
-    threshold = config.get("detection_confidence_threshold", 0.6)
-    st.sidebar.caption(f"Platform scope: `{scope}`")
-    st.sidebar.caption(f"Confidence threshold: `{threshold}`")
+        scope = config.get("platform_scope", "all")
+        threshold = config.get("detection_confidence_threshold", 0.6)
+        st.markdown(f"**Platform scope:** `{scope}`")
+        st.markdown(f"**Confidence threshold:** `{threshold}`")
 
-    if changed:
-        new_config = dict(config)
-        new_config["enabled_log_sources"] = sources
-        if _write_config(new_config):
-            st.sidebar.success("config.yaml updated")
-            # Force a rerun so views re-read the fresh config.
-            st.rerun()
-        return new_config
+        if changed:
+            new_config = dict(config)
+            new_config["enabled_log_sources"] = sources
+            if _write_config(new_config):
+                st.success("config.yaml updated")
+                st.rerun()
+            return new_config
 
     return config
 
@@ -147,7 +155,10 @@ PAGES: dict[str, Any] = {
     "Anomaly Detection": _anomaly.render_anomaly_view,
 }
 
-# --- DB connectivity (Phase 0 gate, now a banner) ---
+
+# ---------------------------------------------------------------------------
+# DB connectivity (Phase 0 gate)
+# ---------------------------------------------------------------------------
 url = database_url()
 try:
     engine = get_engine(url)
@@ -160,12 +171,11 @@ except Exception as exc:  # noqa: BLE001 -- surface, don't crash
     engine = None  # type: ignore[assignment]
 
 if connected:
-    # Mask the database URL to prevent credential leakage in the UI
-    from sqlalchemy.engine import make_url
     try:
+        from sqlalchemy.engine import make_url
         safe_url = make_url(url).render_as_string(hide_password=True)
     except Exception:
-        safe_url = url  # fallback for non-standard URLs
+        safe_url = url
     st.success(f"Database connected: `{safe_url}`")
 
 st.markdown("---")
@@ -176,7 +186,6 @@ if not connected:
 
 # --- Render ---
 config = _load_config_cached()
-config = _render_config_sidebar(config)
 
 page = st.sidebar.radio(
     "Page",
@@ -184,6 +193,10 @@ page = st.sidebar.radio(
     label_visibility="collapsed",
     key="nav_page",
 )
+
+st.sidebar.markdown("---")
+
+config = _render_config_section(config)
 
 
 @contextlib.contextmanager
@@ -202,7 +215,7 @@ def _result_id_picker(session: Any) -> int:
 
     max_id = session.execute(
         select(SimulationResult.id).order_by(SimulationResult.id.desc())
-    ).scalar_one_or_none()
+    ).scalar()
     if max_id is None:
         st.warning("No simulation results in the database yet.")
         st.stop()

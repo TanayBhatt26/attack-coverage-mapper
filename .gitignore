@@ -21,6 +21,13 @@ data/sigma/
 # delete and regenerate — invalidated on SigmaHQ HEAD change per Wave 1).
 data/cache/
 
+# Large generated MITRE ATT&CK Navigator layers (regeneratable via
+# scripts/generate_navigator_layers.py; not consumed by the app).
+layers/
+
+# Generated validation artifact (regeneratable via scripts/validate_coverage.py).
+validation_report.json
+
 # Notebooks
 .ipynb_checkpoints/
 

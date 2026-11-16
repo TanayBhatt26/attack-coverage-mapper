@@ -1,4 +1,4 @@
-"""Streamlit Hunt view (Phase 7).
+"""Streamlit Hunt view (Phase 6).
 
 Renders the work-list invariant emitted by
 :func:`detections.hunt_query_generator.export_all_queries` -- exactly one hunt
@@ -34,8 +34,9 @@ from typing import Any
 import streamlit as st
 
 from src.detections.hunt_query_generator import export_all_queries
+from src.visualization.views.styles import inject_css  # noqa: F401
 
-# Source-badge palette (contract §5).  Keys are the frozen attribution-label
+# Source-badge palette (contract §5). Keys are the frozen attribution-label
 # set; values are (background, foreground) hex pairs chosen for Streamlit's
 # default theme so each pill reads distinctly.
 _BADGE_COLORS: dict[str, tuple[str, str]] = {
@@ -95,9 +96,7 @@ def _render_attribution(label: str, query_rec: Mapping[str, Any]) -> None:
         )
     else:
         # generic
-        st.markdown(
-            f"**License:** {_LICENSE_GENERIC}"
-        )
+        st.markdown(f"**License:** {_LICENSE_GENERIC}")
 
 
 def _render_remediation_link(
@@ -108,7 +107,7 @@ def _render_remediation_link(
     """Render a remediation summary linking to Gap Analysis remediation bundles.
 
     Args:
-        technique_attack_id: The technique ID.
+        technique_attack_id: The technique id.
         closable_by: Candidate disabled sources from the query record.
         config: Live config mapping (for collected_log_sources).
     """
@@ -148,7 +147,18 @@ def _render_technique(
     query_rec: Mapping[str, Any],
     config: dict[str, Any],
 ) -> None:
-    """Render one per-technique expander (contract §2, §3)."""
+    """Render one per-technique expander (contract §2, §3).
+
+    Body contains the inert query in ``st.code`` (built-in copy widget), a
+    colored source badge, and the attribution block.  The query is rendered as
+    inert text -- never executed.
+
+    Args:
+        technique_attack_id: The technique id (e.g. ``"T1059.001"``).
+        technique_name: Human-readable technique name.
+        query_rec: The per-technique record from :func:`export_all_queries`.
+        config: Live config mapping (for closable_by badge colors).
+    """
     label = query_rec["attribution_label"]
     query = query_rec["query"]
     query_language = query_rec["query_language"]
@@ -194,6 +204,7 @@ def render_hunt_view(
 ) -> None:
     """Render the full Hunt dashboard for a simulation run."""
     config = dict(config) if config else {}
+    inject_css()
     st.header("Hunt — missed techniques")
     st.caption(
         "One inert hunt query per missed technique. "
@@ -215,7 +226,7 @@ def render_hunt_view(
         return
 
     # --- Gap list (contract §1) ---
-    st.subheader(f"Gap list ({len(queries)} missed)")
+    st.markdown('<div class="section-title">Gap list</div>', unsafe_allow_html=True)
     gap_rows = [
         {
             "technique_attack_id": tid,
@@ -231,7 +242,7 @@ def render_hunt_view(
     st.markdown("---")
 
     # --- Per-technique expanders (contract §2) ---
-    st.subheader("Queries by technique")
+    st.markdown('<div class="section-title">Queries by technique</div>', unsafe_allow_html=True)
     for tid, rec in queries.items():
         name = rec.get("technique_name") or tid
         _render_technique(tid, name, rec, config)

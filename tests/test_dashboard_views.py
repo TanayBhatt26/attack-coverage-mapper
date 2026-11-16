@@ -277,28 +277,29 @@ def _fake_group_option(gid: str = "G0016", name: str = "APT29", count: int = 66)
 
 
 def _fake_outcome():
-    """A frozen-ish SimulationOutcome stand-in."""
-    per_tactic = [
-        SimpleNamespace(tactic=t, total=10, detected=i, missed=10 - i)
-        for i, t in enumerate(_TACTIC_ORDER)
-    ]
-    techniques = [
-        SimpleNamespace(
-            attack_id="T1059.001", name="PowerShell", tactic="execution",
-            status="missed", confidence=0.2, contributing_sources=(),
-        ),
-    ]
+    """A frozen-ish SimulationResult stand-in mirroring the ORM shape."""
+    per_tactic = {
+        tactic: {
+            "total": 10,
+            "detected": i,
+            "missed": 10 - i,
+        }
+        for i, tactic in enumerate(_TACTIC_ORDER)
+    }
     return SimpleNamespace(
         group_id="G0016",
-        group_name="APT29",
-        total=66,
-        detected=6,
-        detected_rollup=2,
-        missed=58,
+        id=1,
+        total_techniques=66,
+        detected_count=6,
+        missed_count=58,
         coverage_pct=0.1212,
-        per_tactic=tuple(per_tactic),
-        recommendations=("Enable evtx to cover 3 missed techniques (T1059.001…)",),
-        techniques=techniques,
+        summary={
+            "detected_rollup": 2,
+            "per_tactic": per_tactic,
+            "recommendations": [
+                "Enable evtx to cover 3 missed techniques"
+            ],
+        },
     )
 
 

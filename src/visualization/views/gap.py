@@ -18,6 +18,7 @@ import streamlit as st
 from src.analysis.coverage_analyzer import (
     calculate_coverage_gaps,
     load_coverage_rows,
+    _mapping_sources_for,
 )
 from src.analysis.gap_clustering import (
     ClusteringParams,
@@ -29,9 +30,9 @@ from src.analysis.remediation import (
     RemediationCategory,
     classify_all_gaps,
 )
-from src.analysis import _mapping_sources_for
 from src.database.models import Technique
 from src.parser.mappings_io import load_mappings
+from src.visualization.views.styles import inject_css  # noqa: F401
 
 __all__ = ("render_gap_view",)
 
@@ -185,6 +186,7 @@ def _render_unresolved_section(details: list[Any]) -> None:
 
 def render_gap_view(session: Any, config: dict[str, Any]) -> None:
     """Render the Gap Analysis dashboard with Remediation Bundles as primary view."""
+    inject_css()
     st.header("Gap Analysis")
     st.caption(
         "Undetected in-scope techniques, grouped by evidence-based remediation "
@@ -230,6 +232,8 @@ def render_gap_view(session: Any, config: dict[str, Any]) -> None:
     validation_issues = [d for d in remediation_details if d.validation_errors]
     cols[3].metric("Data quality issues", len(validation_issues))
 
+    st.markdown("---")
+
     # Tabs: primary = Remediation Bundles, secondary = Tactic Groups, exploratory = KMeans
     tab_bundles, tab_tactic, tab_kmeans, tab_all = st.tabs([
         "🎯 Remediation Bundles",
@@ -239,7 +243,7 @@ def render_gap_view(session: Any, config: dict[str, Any]) -> None:
     ])
 
     with tab_bundles:
-        st.markdown("### Remediation Bundles")
+        st.markdown('<div class="section-title">Remediation Bundles</div>', unsafe_allow_html=True)
         st.caption(
             "Gaps grouped by shared candidate-source signature. "
             "Each bundle represents a potential coordinated remediation action."
@@ -250,7 +254,6 @@ def render_gap_view(session: Any, config: dict[str, Any]) -> None:
         unresolved = []
         for d in remediation_details:
             if d.candidate_sources:
-                # Create signature from candidate sources and their statuses
                 sig = tuple(sorted(
                     (c.source, c.status) for c in d.candidate_sources
                 ))
@@ -260,7 +263,6 @@ def render_gap_view(session: Any, config: dict[str, Any]) -> None:
 
         # Sort bundles by size (largest first)
         for sig, items in sorted(bundles.items(), key=lambda x: -len(x[1])):
-            # Build human-readable bundle name
             source_names = ", ".join(s for s, _ in sig)
             statuses = ", ".join(f"{s}({st})" for s, st in sig)
             bundle_name = f"Bundle: {source_names} — [{statuses}]"
@@ -270,7 +272,7 @@ def render_gap_view(session: Any, config: dict[str, Any]) -> None:
             _render_unresolved_section(unresolved)
 
     with tab_tactic:
-        st.markdown("### Tactic Groups (Primary)")
+        st.markdown('<div class="section-title">Tactic Groups</div>', unsafe_allow_html=True)
         st.caption("Traditional ATT&CK tactic grouping for reference.")
         by_tactic = defaultdict(list)
         for g in gaps:
@@ -294,7 +296,7 @@ def render_gap_view(session: Any, config: dict[str, Any]) -> None:
                 )
 
     with tab_kmeans:
-        st.markdown("### Exploratory KMeans Clusters")
+        st.markdown('<div class="section-title">Exploratory KMeans Clusters</div>', unsafe_allow_html=True)
         st.caption(
             "Clusters by textual similarity of technique descriptions. "
             "Shared description words do not guarantee shared remediation. "
@@ -325,7 +327,7 @@ def render_gap_view(session: Any, config: dict[str, Any]) -> None:
             _render_cluster(cluster)
 
     with tab_all:
-        st.markdown("### All Gaps (Full Detail)")
+        st.markdown('<div class="section-title">All Gaps (Full Detail)</div>', unsafe_allow_html=True)
         st.dataframe(
             [
                 {

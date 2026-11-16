@@ -154,6 +154,7 @@ def render_anomaly_view(
         )
 
     # --- Metric cards ---
+    st.markdown('<div class="section-title">Anomaly metrics</div>', unsafe_allow_html=True)
     total = len(rows)
     anomalies = [r for r in rows if r["label"] == -1]
     anomaly_count = len(anomalies)
@@ -164,11 +165,14 @@ def render_anomaly_view(
     cols[1].metric("Anomalies", anomaly_count)
     cols[2].metric("Anomaly rate", f"{rate * 100:.1f}%")
 
+    st.markdown("---")
+
     # --- Toggle: anomalies only ---
     only_anomalies = st.checkbox("Show only anomalies", value=False)
     display_rows = anomalies if only_anomalies else rows
 
     # --- Dataframe ---
+    st.markdown('<div class="section-title">Events</div>', unsafe_allow_html=True)
     st.dataframe(
         display_rows,
         use_container_width=True,
@@ -176,7 +180,8 @@ def render_anomaly_view(
     )
 
     # --- Score bar chart ---
-    st.subheader("Anomaly scores")
+    st.markdown("---")
+    st.markdown('<div class="section-title">Anomaly scores</div>', unsafe_allow_html=True)
     scores = [r["score"] for r in display_rows]
     st.plotly_chart(_render_score_bar(scores), use_container_width=True)
 

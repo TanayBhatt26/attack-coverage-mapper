@@ -1,207 +1,143 @@
 # ATT&CK Coverage Mapper
 
-> **Given the log sources a team actually collects, which MITRE ATT&CK
-> techniques can they detect — and which would let an attacker walk through
-> undetected?**
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.62+-red.svg)](https://streamlit.io/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-ATT&CK Coverage Mapper is a Streamlit analytics dashboard layered on top of
-[siem-log-parser](https://github.com/TanayBhatt26/siem-log-parser). It maps
-real log formats and event types against MITRE ATT&CK Enterprise techniques,
-scores coverage confidence using a DeTT&CT-informed rubric, simulates named
-APT groups against configured coverage, clusters detection gaps, and generates
-hunt queries (SigmaHQ-derived where possible).
-
-Built as the course project for **Data Analytics & Visualization** (RRU SITAICS,
-instructor-guided independent build by Tanay Bhatt).
+> **Coverage analytics for MITRE ATT&CK techniques** — Given your log sources, which techniques are detectable? Where are the gaps? What should you enable next?
 
 ---
 
-## Table of Contents
+## Overview
 
-- [Features](#features)
-- [Demo Script](#demo-script)
-- [Install \& Run](#install--run)
-- [Project Layout](#project-layout)
-- [How It Works](#how-it-works)
-  - [Mapping Layer](#mapping-layer)
-  - [Coverage Engine](#coverage-engine)
-  - [APT Simulation](#apt-simulation)
-  - [Hunt Query Generation](#hunt-query-generation)
-  - [Gap Analysis](#gap-analysis)
-- [Configuration](#configuration)
-- [Performance Gates](#performance-gates)
-- [Testing](#testing)
-- [Reused vs. Original](#reused-vs-original)
-- [Attribution](#attribution)
-- [Out of Scope](#out-of-scope)
-- [License](#license)
+The **ATT&CK Coverage Mapper** transforms your log-source inventory into a quantitative, tactic-level coverage map against MITRE ATT&CK Enterprise techniques. It answers three questions:
+
+1. **What can you detect?** — Tactic-level heatmap + per-technique confidence
+2. **Where are the gaps?** — 575 gaps clustered by remediation action (enable source, acquire source, improve mappings)
+3. **What should you do next?** — Hunt queries for every missed technique + greedy marginal-gain source recommendations
 
 ---
 
-## Features
+## Screenshots
 
-| Page | What it shows |
-|------|---------------|
-| **Coverage Overview** | Cividis heatmap of 14 canonical Enterprise tactics; KPI cards update as you toggle log sources |
-| **APT Simulation** | Pick a named APT group → see detected / missed per tactic, greedy acquisition recommendations, missed-technique detail |
-| **Hunt Queries** | One inert hunt query per missed technique, with colored source badges (community-sourced / hand-curated / generic) and full attribution |
-| **Gap Analysis** | KMeans clustering of undetected techniques; each cluster shows which source toggle would close the gap |
-
----
-
-## Demo Script (3–5 min)
-
-1. **Baseline** — Open the Coverage Overview. Note the current coverage % (e.g. ~5% with the default Windows-scoped, evtx+json+cloudtrail+zeek config).
-2. **Simulate APT** — Switch to APT Simulation, pick APT29, click *Run simulation*. Walk through the per-tactic bar chart and the recommended next sources.
-3. **Hunt the gaps** — Switch to Hunt Queries. Expand a missed technique, point out the colored source badge and DRL 1.1 attribution block.
-4. **Cluster view** — Switch to Gap Analysis. Open a cluster, show the "closable_by" source for each gap.
-5. **Toggle a source** — Back to the sidebar, enable a previously disabled log source (e.g. `cef` or `syslog`). Coverage recomputes and the gap count drops.
-
----
-
-## Install & Run
-
-### Prerequisites
-
-- Python 3.11–3.14
-- Git
-- (Optional) Docker Desktop — for the PostgreSQL parity checkpoint
-
-### Setup
-
-```bash
-git clone https://github.com/TanayBhatt26/attack-coverage-mapper.git
-cd attack-coverage-mapper
-
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# macOS/Linux:
-# source .venv/bin/activate
-
-pip install -r requirements.txt
-
-# First run: the ATT&CK bundle is downloaded once and cached to data/attack_stix/
-PYTHONPATH=src python -c "from src.attack_data.loader import load_all; load_all()"
-```
-
-### Run the Dashboard
-
-```bash
-PYTHONPATH=src streamlit run src/visualization/app.py
-```
-
-Then open the URL Streamlit prints (default: http://localhost:8501).
-
-### Run Tests
-
-```bash
-PYTHONPATH=src .venv/Scripts/python.exe -m pytest -q          # Windows
-PYTHONPATH=src .venv/bin/python -m pytest -q                  # macOS/Linux
-```
-
-Expected: **573+ passed, 1 skipped**.
-
----
-
-## Project Layout
-
-```
-attack-coverage-mapper/
-├── data/
-│   ├── attack_mappings.csv        ← hand-curated mapping rules (the intellectual core)
-│   ├── attack_stix/               ← cached MITRE ATT&CK STIX bundle
-│   └── sample_logs/               ← 8 sample logs from the base repo
-├── src/
-│   ├── attack_data/               ← mitreattack-python wrapper, loader
-│   ├── parser/                    ← LogEvent bridge, attack_mapper, siem_parsers
-│   ├── detections/                ← Sigma index, hunt-query emitter
-│   ├── database/                  ← SQLAlchemy models, session
-│   ├── analysis/                  ← coverage engine, clustering, simulation
-│   └── visualization/             ← Streamlit app + 4 views
-├── tests/                         ← 573+ tests (unit + integration)
-├── notebooks/                     ← exploratory analysis notebooks
-├── config.yaml                    ← toggle log sources, threshold, scope
-├── docker-compose.yml             ← PostgreSQL service (checkpoint use)
-└── README.md
-```
-
----
-
-## How It Works
-
-### Mapping Layer
-
-`data/attack_mappings.csv` is the intellectual core of the project — 83
-hand-curated rows mapping real `source_format` + `event_action` /
-`extensions` patterns to ATT&CK technique IDs. Each row carries a
-`base_confidence`, a `visibility_hint` (0–4, DeTT&CT-inspired), and an
-`evidence_ref` linking back to a MITRE Detection Strategy (DET####) or
-Analytic (AN####) object.
-
-`src/parser/attack_mapper.py` applies a tiered matching scheme:
-
-| Tier | Rule shape | Multiplier |
-|------|-----------|------------|
-| Extension-value rule | declares `ext_keys` + value pattern | ×1.00 |
-| Action-only rule | declares `event_action_pattern` | ×0.85 |
-| Heuristic rule | `match_type == 'heuristic'` | ×0.40 |
-
-Capped at 0.95. A technique is **detectable** iff `best_confidence >=
-threshold` (default 0.6, inclusive).
-
-### Coverage Engine
-
-`src/analysis/coverage_analyzer.py` materializes one `technique_coverage`
-row per `(technique_stix_id, datasource_id)` pair for every enabled log
-format, idempotently. The 14-bucket tactic rollup feeds the heatmap; the
-gap list feeds the clustering and hunt-query emitters.
+### Coverage Overview
+![Coverage Overview](docs/screenshots/coverage-overview.png)
 
 ### APT Simulation
+![APT Simulation](docs/screenshots/apt-simulation.png)
 
-`src/analysis/simulation.py` runs a named APT group's techniques (loaded
-from the ATT&CK `relationship` objects of type `uses`) through the
-coverage engine. It reports detected / missed / roll-up counts, computes
-per-tactic breakdowns, and emits greedy marginal-gain acquisition advice.
-
-Verified against live ATT&CK data:
-
-| Group | STIX ID | Techniques | Coverage |
-|-------|---------|-----------|----------|
-| APT29 | G0016 | 66 | 12.12% |
-| APT41 | G0096 | 82 | 21.95% |
-| Lazarus | G0032 | 93 | 16.13% |
-
-### Hunt Query Generation
-
-`src/detections/hunt_query_generator.py` emits exactly one inert hunt query
-per missed technique (work-list invariant), by fixed precedence:
-
-1. **hand-curated** — the M001–M020 core mapping set
-2. **community-sourced** — a SigmaHQ rule converted via pySigma's
-   `SplunkBackend` + `splunk_windows_pipeline`
-3. **generic** — an `# UNREVIEWED` placeholder template
-
-Every emitted query carries a DRL 1.1 attribution record (author, rule UUID,
-GitHub permalink, license). Queries are inert text only — the module never
-executes them.
+### Hunt Queries
+![Hunt Queries](docs/screenshots/hunt-queries.png)
 
 ### Gap Analysis
+![Gap Analysis](docs/screenshots/gap-analysis-all.png)
 
-`src/analysis/gap_clustering.py` clusters undetected techniques by tactic
-one-hot (weight 2) + TF-IDF KMeans, with silhouette k-selection and
-deterministic seeding. Each cluster gets a human-readable label and a summary.
+---
+
+## Quick Start
+
+### Prerequisites
+- Python 3.11+
+- SQLite (default) or PostgreSQL 15+
+
+### Installation
+```bash
+git clone https://github.com/your-org/attack-coverage-mapper.git
+cd attack-coverage-mapper
+python -m venv .venv
+.venv/Scripts/activate    # Linux/macOS: source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Run
+```bash
+# Terminal 1: Start Streamlit dashboard
+PYTHONPATH=src .venv/Scripts/python.exe -m streamlit run src/visualization/app.py
+
+# Terminal 2 (optional): Run Phase 7 demo
+PYTHONPATH=src .venv/Scripts/python.exe scripts/run_phase7_demo.py G0016 -v
+```
+
+Open http://localhost:8501 in your browser.
+
+### Data Initialization (first run only)
+
+A fresh clone ships with an empty SQLite database (`db/coverage.db` is gitignored).
+Before the dashboard shows coverage data, initialize it:
+
+```bash
+# 1. Ingest MITRE ATT&CK STIX data (Enterprise techniques + tactics)
+PYTHONPATH=src .venv/Scripts/python.exe scripts/populate_db.py
+
+# 2. Clone SigmaHQ rules (used for community-sourced hunt queries)
+git clone --depth 1 https://github.com/SigmaHQ/sigma.git data/sigma
+
+# 3. Run the Phase 7 demo to create simulation results
+PYTHONPATH=src .venv/Scripts/python.exe scripts/run_phase7_demo.py G0016 -v
+```
+
+These three steps are idempotent and safe to re-run. The database is local-only
+(`db/*.db` is gitignored) and never pushed.
+
+---
+
+## Architecture
+
+```text
+                           STREAMLIT DASHBOARD
+      Coverage Overview | APT Simulation | Hunt Queries | Gap Analysis
+                                    │
+                                    ▼
+                    ┌──────────────────────────────────────┐
+                    │         ANALYSIS LAYER               │
+                    │ Coverage Analyzer │ Gap Clustering   │
+                    │ Simulation Engine  │ Remediation   │
+                    └──────────────────────────────────────┘
+                                   │
+                                   ▼
+                    ┌──────────────────────────────────────┐
+                    │           PARSER LAYER               │
+                    │ LogEvent Bridge │ Attack Mapper      │
+                    │ Mappings I/O  │ SIEM Parsers         │
+                    └──────────────────────────────────────┘
+                                   │
+                                   ▼
+                    ┌──────────────────────────────────────┐
+                    │           DATA LAYER                 │
+                    │ SQLite/PostgreSQL │ ATT&CK STIX     │
+                    │ Mappings CSV  │ Sigma Cache         │
+                    └──────────────────────────────────────┘
+```
+
+### Key Modules
+
+| Module | Purpose |
+|--------|---------|
+| `src/analysis/coverage_analyzer.py` | Load coverage rows, tactic rollup, gap calculation |
+| `src/analysis/gap_clustering.py` | KMeans + TF-IDF clustering of gaps |
+| `src/analysis/simulation.py` | APT group simulation + recommendations |
+| `src/analysis/remediation.py` | Evidence-based gap classification |
+| `src/detections/hunt_query_generator.py` | 3-tier hunt query dispatch (curated > Sigma > generic) |
+| `src/detections/sigma_index.py` | Technique → Sigma rules index |
+| `src/parser/attack_mapper.py` | Tiered mapping with confidence scoring |
+| `src/visualization/views/*.py` | Four dashboard views |
 
 ---
 
 ## Configuration
 
-`config.yaml` drives the dashboard:
+Edit `config.yaml`:
 
 ```yaml
-platform_scope: windows
-detection_confidence_threshold: 0.6
+platform_scope: windows              # windows | linux | macos | all
+detection_confidence_threshold: 0.6  # 0.0–1.0
 
+# Sources the organization actually collects (for remediation classification)
+collected_log_sources:
+  - evtx
+  - zeek
+
+# Sources included in current coverage calculation (toggle in dashboard)
 enabled_log_sources:
   evtx: true
   syslog: true
@@ -213,94 +149,168 @@ enabled_log_sources:
   zeek: true
 ```
 
-Toggle sources in the sidebar or edit `config.yaml` directly — coverage
-recomputes on change.
+**Key distinction:** `enabled_log_sources` = analysis-time toggles (dashboard). `collected_log_sources` = operational inventory (for remediation classification).
 
 ---
 
-## Performance Gates
+## Dashboard Views
 
-| Gate | Budget | Measured |
-|------|--------|----------|
-| Full recompute (load + by-tactic + gaps + simulation) | < 5 s | ~0.06 s |
-| Cached render path | < 3 s | < 0.01 s |
+### 1. Coverage Overview
+- **Heatmap**: 14 ATT&CK tactics (Cividis colorscale)
+- **KPIs**: In-scope, Detectable, Coverage %, Platform, Threshold
+- **Estimated Addressable**: Per-source marginal gain (independent vs baseline)
 
-Enforced by `tests/test_performance.py`.
+### 2. APT Simulation
+- Group picker (G0016 APT29, G0096 APT41, G0032 Lazarus)
+- KPIs + per-tactic stacked bars
+- Greedy marginal-gain recommendations
+- Missed technique detail table
+
+### 3. Hunt Queries
+- Gap list (1 row = 1 missed technique, ASC order)
+- Per-technique expander:
+  - `st.code()` with copy widget
+  - Colored badge: community-sourced / hand-curated / generic
+  - Attribution block (DRL 1.1 for community)
+  - Remediation link (source status → action)
+  - UNREVIEWED header on generic queries
+
+### 4. Gap Analysis
+- **Remediation Bundles** (primary): Grouped by shared candidate sources
+- **Tactic Groups**: Traditional ATT&CK tactic buckets
+- **Exploratory KMeans**: Textual similarity clusters (secondary)
+- **All Gaps**: Full table with remediation categories
+
+---
+
+## Coverage Scoring
+
+```
+Technique Score = max(enabled_sources) of:
+    base_confidence × tier_multiplier
+
+Tier multipliers:
+  Extension-value match (tier 1):  1.00
+  Action-pattern match (tier 2):   0.85
+  Heuristic/format (tier 3):       0.40
+  Cap: 0.95
+
+Detectable ⇔ Technique Score ≥ threshold (default 0.6, inclusive)
+```
+
+**Important**: The score represents *mapping-based potential observability*, not the probability of detecting an actual attack. It assumes the mapped events exist and the SIEM rules fire correctly.
+
+---
+
+## Remediation Logic (Phase 7)
+
+Each gap is classified into one category:
+
+| Category | Trigger | Action |
+|----------|---------|--------|
+| `CANDIDATE_SOURCE_ENABLEMENT` | Collected but disabled source in `closable_by` | Enable in config |
+| `POTENTIAL_SOURCE_ACQUISITION` | Not-collected source in `closable_by` | Evaluate acquisition |
+| `SOURCE_STATUS_UNKNOWN` | `closable_by` source, inventory unknown | Investigate inventory |
+| `REVIEW_EXISTING_SOURCE_MAPPINGS` | Enabled source contributes, score < 0.6 | Review mapping tier |
+| `MAPPING_TELEMETRY_REVIEW` | Mappings exist, no candidate reaches threshold | Review mapping/telemetry |
+| `MAPPING_COVERAGE_GAP` | No applicable mapping | Add mapping row |
+| `DATA_QUALITY_ISSUE` | Enabled source in `closable_by` (invariant violation) | Investigate data quality |
+
+---
+
+## Hunt Query Attribution
+
+| Source | License | Attribution |
+|--------|---------|-------------|
+| Hand-curated (M001–M020) | Project-original | ATT&CK Coverage Mapper |
+| Community-sourced (SigmaHQ) | DRL 1.1 | Author, Rule ID, Repo URL, DRL 1.1 statement |
+| Generic fallback | Template — not a detection rule | UNREVIEWED header |
+
+---
+
+## Limitations
+
+| Limitation | Mitigation |
+|------------|------------|
+| Score ≠ detection probability | Model explicitly labeled "estimated coverage" |
+| 5.12% coverage reflects mapping density | Add mappings; enable sources |
+| 574/575 gaps have no closable source | Prioritize mapping work for high-value gaps |
+| KMeans is exploratory | Primary view = Remediation Bundles (evidence-based) |
+| Hunt queries are unvalidated templates | `UNREVIEWED` header on generic; DRL attribution on community |
+| SigmaHQ clone not in repo | Clone with `git clone --depth 1 https://github.com/SigmaHQ/sigma.git data/sigma` |
+
+---
+
+## Data Sources & Attribution
+
+| Asset | Source | License | Attribution |
+|-------|--------|---------|-------------|
+| MITRE ATT&CK Enterprise | MITRE | Apache-2.0 | MITRE ATT&CK © MITRE |
+| MITRE ATT&CK Python | mitreattack-python | Apache-2.0 | mitreattack-python © MITRE |
+| Sigma Rules | SigmaHQ | DRL 1.1 | SigmaHQ © authors, DRL 1.1 |
+| pySigma | pySigma | LGPL-3.0 | pySigma contributors |
+| Diskcache | diskcache | Apache-2.0 | Grant Jenks |
+
+> **Residual vulnerability**: `diskcache==5.6.3` has CVE-2025-69872 (unsafe pickle deserialization). No patched version available. Risk is low (requires write access to cache directory). Ensure cache directory is not writable by untrusted processes.
 
 ---
 
 ## Testing
 
 ```bash
-# Full suite (offline)
+# Full suite (595 passed, 0 failed, 7 skipped)
 PYTHONPATH=src .venv/Scripts/python.exe -m pytest -q
 
-# Subsets
-PYTHONPATH=src .venv/Scripts/python.exe -m pytest -m unit -q
-PYTHONPATH=src .venv/Scripts/python.exe -m pytest -m integration -q
-PYTHONPATH=src .venv/Scripts/python.exe -m pytest tests/test_performance.py -q
+# Core tests only (excludes golden-data integration)
+PYTHONPATH=src .venv/Scripts/python.exe -m pytest tests/test_remediation.py tests/test_hunt_view.py tests/test_dashboard_views.py -q
+
+# Validation report
+PYTHONPATH=src .venv/Scripts/python.exe scripts/validate_coverage.py
 ```
 
-Markers: `unit` (no I/O), `integration` (filesystem/SQLite, offline),
-`network` (live downloads — excluded in CI).
+---
+
+## Reproducibility
+
+```bash
+# Clean clone test
+git clone https://github.com/your-org/attack-coverage-mapper.git
+cd attack-coverage-mapper
+python -m venv .venv
+.venv/Scripts/activate
+pip install -r requirements.txt
+PYTHONPATH=src python -m pytest -q
+# Expected: 595 passed, 0 failed, 7 skipped
+```
+
+All tests pass on a fully populated clone. The 7 skipped tests require optional dependencies
+not installed in the base environment (diskcache, Playwright).
 
 ---
 
-## Reused vs. Original
+## Roadmap
 
-| Component | Source | What this project does |
-|-----------|--------|------------------------|
-| MITRE ATT&CK data | mitreattack-python (Apache-2.0) | Wraps the official library; ingests structured Detection Strategy / Analytics objects |
-| Hunt queries | SigmaHQ rules (DRL 1.1) | Indexes by ATT&CK tag, converts via pySigma Splunk backend, attributes every export |
-| Scoring rubric | DeTT&CT methodology (conceptual reference) | Adapts the visibility/data-quality tiers into the confidence formula |
-| LogEvent schema | siem-log-parser (owner-authored, vendored with attribution header) | Adapted; geo/IP fields dropped, ATT&CK enrichment fields added |
-| Base algorithms | scikit-learn, Plotly, Streamlit | Used as-is per their licenses |
-
-| Component | Original to this project |
-|-----------|--------------------------|
-| `data/attack_mappings.csv` — 83 curated mapping rules | ✓ |
-| `src/parser/attack_mapper.py` — tiered matcher | ✓ |
-| `src/analysis/coverage_analyzer.py` — idempotent populate + gap analysis | ✓ |
-| `src/analysis/gap_clustering.py` — KMeans gap clustering | ✓ |
-| `src/analysis/simulation.py` — APT simulation engine | ✓ |
-| `src/detections/hunt_query_generator.py` — hunt-query dispatch | ✓ |
-| `src/visualization/` — Streamlit dashboard | ✓ |
-| Confidence formula (DeTT&CT-attributed) | ✓ |
-
----
-
-## Attribution
-
-- **MITRE ATT&CK** — © The MITRE Corporation. ATT&CK is a trademark of
-  MITRE. See [https://attack.mitre.org/resources/terms-of-use/](https://attack.mitre.org/resources/terms-of-use/).
-- **mitreattack-python** — Apache-2.0, The MITRE Corporation & contributors.
-- **SigmaHQ** — Detection Rule License (DRL) 1.1. See
-  [https://github.com/SigmaHQ/Detection-Rule-License](https://github.com/SigmaHQ/Detection-Rule-License).
-- **DeTT&CT** — MITRE (conceptual reference only; this project does not
-  redistribute the DeTT&CT tooling).
-- **scikit-learn** — BSD-3-Clause.
-- **Streamlit** — Apache-2.0.
-- **Plotly** — MIT.
-- **siem-log-parser** — TanayBhatt26 (owner-authored, adapted and vendored
-  with attribution; upstream published without a license file).
-
----
-
-## Out of Scope
-
-This project explicitly does **not**:
-
-- Ingest logs from a live SIEM.
-- Execute any hunt query against real systems.
-- Build or distribute offensive tooling.
-- Re-implement the DeTT&CT tooling.
-
-All data used in the demo is synthetic or publicly available sample logs.
+- [x] Phase 8: README, screenshots, validation report
+- [ ] Phase 9: Demo script, clean-clone rehearsal
+- [ ] Phase 10: Viva question bank, pip-audit, license review
 
 ---
 
 ## License
 
-This project's original code is licensed under the MIT License (see
-`LICENSE`). Third-party components remain under their own licenses (see
-[Attribution](#attribution)).
+MIT License — see [LICENSE](LICENSE)
+
+---
+
+## Citation
+
+If you use this work, please cite:
+
+```
+@software{attack_coverage_mapper,
+  title = {ATT&CK Coverage Mapper},
+  author = {Tanay Bhatt},
+  year = {2026},
+  url = {https://github.com/your-org/attack-coverage-mapper}
+}
+```

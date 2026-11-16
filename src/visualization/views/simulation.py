@@ -1,7 +1,7 @@
 """Streamlit APT Simulation view (Phase 6).
 
 Renders a group picker, runs :func:`analysis.simulation.simulate_apt_attack`,
-and displays the frozen :class:`SimulationOutcome` -- KPI row, per-tactic
+and displays the frozen :class:`SimulationResult` -- KPI row, per-tactic
 detected/missed bar chart, plain-language recommendations, and a missed-
 technique detail table.
 
@@ -17,6 +17,7 @@ from __future__ import annotations
 
 from typing import Any
 
+import html
 import plotly.graph_objects as go
 import streamlit as st
 
@@ -25,6 +26,8 @@ from src.analysis.simulation import (
     simulate_apt_attack,
 )
 from src.database.session import session_scope
+from src.database.models import SimulationTechnique
+from src.visualization.views.styles import inject_css  # noqa: F401
 
 __all__ = ("render_simulation_view",)
 
@@ -62,28 +65,34 @@ def _group_picker(session: Any, config: dict[str, Any]) -> str:
     ) or default
 
 
-def _render_outcome(outcome: Any) -> None:
-    """Render a completed :class:`SimulationOutcome`.
+def _render_outcome(outcome: Any, session: Any) -> None:
+    """Render a completed :class:`SimulationResult`.
 
     KPI row, per-tactic detected/missed bar chart, recommendations, and a
     missed-technique detail table.
 
     Args:
-        outcome: A :class:`SimulationOutcome` (frozen, hashable).
+        outcome: A :class:`SimulationResult` from
+            :func:`simulate_apt_attack`.
+        session: An open SQLAlchemy session.
     """
     # --- KPI row ---
-    st.subheader("Simulation results")
+    st.markdown('<div class="section-title">Simulation results</div>', unsafe_allow_html=True)
     cols = st.columns(5)
-    cols[0].metric("Total techniques", outcome.total)
-    cols[1].metric("Detected", outcome.detected)
-    cols[2].metric("Detected (incl. rollup)", outcome.detected + outcome.detected_rollup)
-    cols[3].metric("Missed", outcome.missed)
+    cols[0].metric("Total techniques", outcome.total_techniques)
+    cols[1].metric("Detected", outcome.detected_count)
+    cols[2].metric("Detected (incl. rollup)", outcome.detected_count + outcome.summary.get("detected_rollup", 0))
+    cols[3].metric("Missed", outcome.missed_count)
     cols[4].metric("Coverage %", f"{outcome.coverage_pct * 100:.2f}%")
 
+    st.markdown("---")
+
     # --- Per-tactic bar chart ---
-    tactics = [tb.tactic for tb in outcome.per_tactic]
-    detected = [tb.detected for tb in outcome.per_tactic]
-    missed = [tb.missed for tb in outcome.per_tactic]
+    st.markdown('<div class="section-title">Detected vs. missed by tactic</div>', unsafe_allow_html=True)
+    per_tactic = outcome.summary.get("per_tactic", {})
+    tactics = list(per_tactic.keys())
+    detected = [per_tactic[t].get("detected", 0) for t in tactics]
+    missed = [per_tactic[t].get("missed", 0) for t in tactics]
     fig = go.Figure()
     fig.add_trace(
         go.Bar(name="Detected", x=tactics, y=detected, marker_color="#4caf50")
@@ -103,23 +112,27 @@ def _render_outcome(outcome: Any) -> None:
     st.plotly_chart(fig, use_container_width=True)
 
     # --- Recommendations (plain-language) ---
-    import html
-    st.subheader("Recommended next sources")
-    if outcome.recommendations:
-        for rec in outcome.recommendations:
+    st.markdown("---")
+    st.markdown('<div class="section-title">Recommended next sources</div>', unsafe_allow_html=True)
+    recommendations = outcome.summary.get("recommendations", [])
+    if recommendations:
+        for rec in recommendations:
             rec_safe = html.escape(str(rec))
             st.markdown(f"- {rec_safe}")
     else:
         st.info("No acquisition recommendations -- all missed techniques lack a mappable source.")
 
     # --- Missed-technique detail ---
-    missed_techs = [t for t in outcome.techniques if t.status == "missed"]
+    missed_techs = session.query(SimulationTechnique).filter(
+        SimulationTechnique.result_id == outcome.id,
+        SimulationTechnique.status == "missed",
+    ).all()
     if missed_techs:
         with st.expander(f"Missed techniques ({len(missed_techs)})", expanded=False):
             st.dataframe(
                 [
                     {
-                        "technique": t.attack_id,
+                        "technique": t.technique_attack_id,
                         "name": t.name,
                         "tactic": t.tactic,
                         "confidence": f"{t.confidence:.4f}",
@@ -146,6 +159,7 @@ def render_simulation_view(
         session: An open SQLAlchemy session.
         config: The live config mapping.
     """
+    inject_css()
     st.header("APT Simulation")
     st.caption(
         "Simulate a named APT group's techniques against your current coverage. "
@@ -172,7 +186,7 @@ def render_simulation_view(
                 st.stop()
                 return
 
-        st.success(f"Simulation complete: {outcome.group_id}")
-        _render_outcome(outcome)
+            st.success(f"Simulation complete: {outcome.group_id}")
+            _render_outcome(outcome, session)
     else:
         st.info("Select an APT group in the sidebar and click **Run simulation**.")
