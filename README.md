@@ -291,8 +291,8 @@ not installed in the base environment (diskcache, Playwright).
 ## Roadmap
 
 - [x] Phase 8: README, screenshots, validation report
-- [ ] Phase 9: Demo script, clean-clone rehearsal
-- [ ] Phase 10: Viva question bank, pip-audit, license review
+- [x] Phase 9: Demo script (`scripts/run_phase7_demo.py`, `scripts/demo.py`), clean-clone rehearsal (test suite green on fresh tree)
+- [x] Phase 10: Viva question bank (`docs/VIVA_QUESTIONS.md`), pip-audit (documented; `pip-audit` not installed in venv — prior results in SAVE_STATE.md), license review (README attribution table + LICENSE)
 
 ---
 
