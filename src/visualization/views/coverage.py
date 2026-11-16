@@ -218,8 +218,6 @@ def render_coverage_view(session: Any, config: dict[str, Any]) -> None:
     _kpi_cards(rows, config)
 
     st.markdown("---")
-
-    # --- Heatmap ---
     st.markdown('<div class="section-title">Coverage by tactic</div>', unsafe_allow_html=True)
     tactic_coverage = coverage_by_tactic(rows)
     st.plotly_chart(_heatmap(tactic_coverage), use_container_width=True)

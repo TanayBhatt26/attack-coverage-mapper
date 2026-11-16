@@ -168,13 +168,13 @@ def _render_technique(
         # Colored source badge (contract §5).
         import html
         label_safe = html.escape(str(label))
-        bg, fg = _BADGE_COLORS.get(label, ("#333333", "#dddddd"))
+        badge_class = {
+            "community-sourced": "badge-community-sourced",
+            "hand-curated": "badge-hand-curated",
+            "generic": "badge-generic",
+        }.get(label, "badge-generic")
         st.markdown(
-            f"<span style='"
-            f"background:{bg};color:{fg};"
-            f"padding:2px 10px;border-radius:10px;"
-            f"font-size:0.8em;font-weight:600;'>"
-            f"{label_safe}</span>",
+            f'<span class="badge {badge_class}">{label_safe}</span>',
             unsafe_allow_html=True,
         )
 

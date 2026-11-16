@@ -104,7 +104,7 @@ def _render_outcome(outcome: Any, session: Any) -> None:
         barmode="stack",
         height=420,
         margin=dict(l=120, r=40, t=20, b=200),
-        xaxis_tickangle=-60,
+        xaxis_tickangle=-45,
         xaxis=dict(title="Tactic"),
         yaxis=dict(title="Technique count"),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1.0),

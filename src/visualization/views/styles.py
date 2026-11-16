@@ -24,6 +24,12 @@ CSS = """
     padding-bottom: 2.5rem;
     padding-left: 1.5rem;
     max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure main content doesn't cause horizontal overflow */
+.main {
+    overflow-x: hidden;
 }
 
 /* ============================================================================
@@ -46,6 +52,30 @@ CSS = """
     margin-bottom: 0.75rem;
     padding-bottom: 0.375rem;
     border-bottom: 1px solid #1f2937;
+}
+
+/* Make sidebar scrollable on small screens so all nav items remain reachable */
+[data-testid="stSidebar"] {
+    overflow-y: auto;
+}
+
+/* Reduce sidebar header height on small screens */
+[data-testid="stSidebar"] .stMarkdown > div:first-child {
+    margin-top: 0.5rem;
+}
+
+/* Compact the navigation radio group on small screens */
+@media (max-width: 768px) {
+    [data-testid="stSidebar"] .stRadio > div {
+        gap: 0.25rem;
+    }
+    [data-testid="stSidebar"] .stRadio label {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.5rem;
+    }
+    [data-testid="stSidebar"] [data-testid="stSidebarNav"] {
+        padding-top: 0.5rem;
+    }
 }
 
 /* ============================================================================
@@ -78,6 +108,7 @@ CSS = """
     border-radius: 6px;
     padding: 1rem 1.25rem;
     margin-bottom: 0.75rem;
+    box-sizing: border-box;
 }
 
 .metric-value {
@@ -85,6 +116,7 @@ CSS = """
     font-weight: 700;
     color: #f8fafc;
     line-height: 1.2;
+    word-wrap: break-word;
 }
 
 .metric-label {
@@ -93,13 +125,14 @@ CSS = """
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-top: 0.25rem;
+    word-wrap: break-word;
 }
 
 /* Colored source badges (hunt queries) */
 .badge {
     display: inline-flex;
     align-items: center;
-    padding: 3px 10px;
+    padding: 3px 8px;
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 600;
@@ -121,6 +154,7 @@ CSS = """
     line-height: 1.5;
     overflow-x: auto;
     margin-bottom: 1rem;
+    box-sizing: border-box;
 }
 
 /* Status / informational banners */
@@ -132,6 +166,7 @@ CSS = """
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 6px;
+    box-sizing: border-box;
 }
 .warning-banner {
     background-color: #0b1016;
@@ -141,6 +176,7 @@ CSS = """
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 6px;
+    box-sizing: border-box;
 }
 
 /* Inline code */
@@ -151,13 +187,14 @@ code {
     border-radius: 4px;
     font-size: 0.85em;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    word-wrap: break-word;
 }
 
 /* Tables */
 .stDataFrame {
     border: 1px solid #1f2937 !important;
     border-radius: 6px !important;
-    overflow: hidden !important;
+    overflow-x: auto !important;
 }
 .stDataFrame th {
     background-color: #111827 !important;
@@ -166,10 +203,56 @@ code {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 .stDataFrame td {
     color: #e2e8f0 !important;
     border-bottom: 1px solid #1f2937 !important;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .main .block-container {
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .section-title {
+        margin: 1.25rem 0 0.5rem 0;
+        font-size: 0.8rem;
+    }
+
+    .badge {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        white-space: normal;
+    }
+
+    .stDataFrame th {
+        font-size: 0.65rem;
+        padding: 4px 6px;
+    }
+
+    .stDataFrame td {
+        font-size: 0.7rem;
+        padding: 4px 6px;
+    }
+
+    /* Stack Streamlit columns vertically on small screens */
+    [data-testid="stHorizontalBlock"] {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    [data-testid="stColumn"] {
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+    }
+    [data-testid="stMetric"] {
+        width: 100% !important;
+    }
 }
 </style>
 """
