@@ -954,6 +954,15 @@ class TestCoverageAndGapSemanticsSynthetic:
 # ---------------------------------------------------------------------------
 
 
+@pytest.mark.skipif(
+    not STIX_CACHE.is_file(),
+    reason=(
+        "data/attack_stix/enterprise-attack.json is gitignored (large, "
+        "re-downloadable) and therefore absent from a fresh clone/CI; run the "
+        "ATT&CK ingest (scripts/populate_db.py) to enable the golden real-data "
+        "tests. Same guard pattern as tests/test_performance.py."
+    ),
+)
 class TestGoldenRealDataIntegration:
     """Real CSV x real cache universe x repo config -> Wave-1 goldens."""
 
