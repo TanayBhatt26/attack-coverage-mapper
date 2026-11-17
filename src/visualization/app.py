@@ -22,9 +22,14 @@ if str(SRC) not in sys.path:
 
 import streamlit as st  # noqa: E402
 from sqlalchemy import select, text  # noqa: E402
-from sqlalchemy.orm import Session, sessionmaker  # noqa: E402
+from sqlalchemy.orm import Session  # noqa: E402
 
-from database.session import database_url, make_engine  # noqa: E402
+from database.session import (  # noqa: E402
+    database_url,
+    make_engine,
+    session_scope,
+    verify_schema,
+)
 from src.config_loader import load_config  # noqa: E402
 from src.visualization.views.styles import inject_css  # noqa: E402
 
@@ -164,6 +169,10 @@ try:
     engine = get_engine(url)
     with engine.connect() as conn:
         conn.execute(text("SELECT 1"))
+    # `SELECT 1` only proves the server is awake. Verify the application schema
+    # too, so an empty or wrong database fails loudly instead of rendering a
+    # blank dashboard (the Streamlit Cloud failure this guard exists for).
+    verify_schema(engine)
     connected = True
 except Exception as exc:  # noqa: BLE001 -- surface, don't crash
     connected = False
@@ -176,7 +185,7 @@ if connected:
         safe_url = make_url(url).render_as_string(hide_password=True)
     except Exception:
         safe_url = url
-    st.success(f"Database connected: `{safe_url}`")
+    st.success(f"Database connected and schema verified: `{safe_url}`")
 
 st.markdown("---")
 
@@ -201,12 +210,18 @@ config = _render_config_section(config)
 
 @contextlib.contextmanager
 def _bound_session(engine: Any) -> Session:
-    """Open a short-lived session bound to *engine*; close on exit."""
-    session = sessionmaker(bind=engine)()
-    try:
+    """Open a short-lived, committing session bound to *engine*.
+
+    Delegates to :func:`database.session.session_scope` so the dashboard shares
+    one transactional contract with the rest of the codebase.  The commit is
+    load-bearing: ``simulate_apt_attack(..., persist=True)`` only *stages* the
+    new SimulationResult and its SimulationTechnique rows on the caller's
+    session, so a close-without-commit silently discarded every run made from
+    the dashboard (the UI still reported success because the outcome object was
+    already populated in memory).
+    """
+    with session_scope(engine) as session:
         yield session
-    finally:
-        session.close()
 
 
 def _result_id_picker(session: Any) -> int:

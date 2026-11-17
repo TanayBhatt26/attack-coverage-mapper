@@ -172,9 +172,9 @@ def render_simulation_view(
     if st.sidebar.button("Run simulation", type="primary"):
         with st.spinner(f"Simulating {group_id}..."):
             try:
-                # simulate_apt_attack persists when persist=True; it owns its
-                # own write transaction.  We pass the caller's session so the
-                # view's (read-only) engine is reused.
+                # simulate_apt_attack persists when persist=True; it stages the
+                # new rows on the caller's session, which app.py's
+                # _bound_session commits when the render completes cleanly.
                 outcome = simulate_apt_attack(
                     group_id,
                     session=session,

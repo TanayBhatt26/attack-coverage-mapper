@@ -60,10 +60,12 @@ PYTHONPATH=src .venv/Scripts/python.exe scripts/run_phase7_demo.py G0016 -v
 
 Open http://localhost:8501 in your browser.
 
-### Data Initialization (first run only)
+### Data Initialization (optional)
 
-A fresh clone ships with an empty SQLite database (`db/coverage.db` is gitignored).
-Before the dashboard shows coverage data, initialize it:
+The repository ships with a populated `db/coverage.db`, so a fresh clone opens a
+working dashboard with no setup. The steps below rebuild that database from
+source when you want to refresh the ATT&CK data, regenerate coverage, or add
+SigmaHQ-backed hunt queries:
 
 ```bash
 # 1. Ingest MITRE ATT&CK STIX data (Enterprise techniques + tactics)
@@ -76,8 +78,9 @@ git clone --depth 1 https://github.com/SigmaHQ/sigma.git data/sigma
 PYTHONPATH=src .venv/Scripts/python.exe scripts/run_phase7_demo.py G0016 -v
 ```
 
-These three steps are idempotent and safe to re-run. The database is local-only
-(`db/*.db` is gitignored) and never pushed.
+These three steps are idempotent and safe to re-run. The committed database is
+a seed for a zero-install first run; `db/*.db` is gitignored, so your local
+changes stay local.
 
 ---
 
@@ -150,6 +153,39 @@ enabled_log_sources:
 ```
 
 **Key distinction:** `enabled_log_sources` = analysis-time toggles (dashboard). `collected_log_sources` = operational inventory (for remediation classification).
+
+**Deployment environment:** `APP_ENV` (default `development`) controls how strictly `DATABASE_URL` is resolved. In `production` it is mandatory and must be PostgreSQL. See [Deployment](#deployment-postgresql--streamlit-cloud).
+
+---
+
+## Deployment (PostgreSQL / Streamlit Cloud)
+
+Streamlit Community Cloud mounts the repository **read-only**, so the SQLite
+default cannot persist simulations there. Set `APP_ENV=production` and point
+`DATABASE_URL` at a managed PostgreSQL database instead; the app then refuses to
+start rather than silently falling back to a read-only file.
+
+```bash
+# one-time copy of the existing SQLite database into PostgreSQL
+PYTHONPATH=src ./.venv/Scripts/python.exe scripts/migrate_sqlite_to_postgres.py \
+    --postgres-url "postgresql+psycopg://user:password@host:5432/dbname" \
+    --deep-verify
+```
+
+Streamlit Cloud Secrets:
+
+```toml
+APP_ENV = "production"
+DATABASE_URL = "postgresql+psycopg://user:password@host:5432/dbname"
+```
+
+The migration is atomic, never drops anything, refuses a target that already
+holds data, and re-synchronises the identity sequences so new simulations get
+`max(id) + 1`. Local development is unaffected: with `APP_ENV` unset the app
+still uses `db/coverage.db`.
+
+Full guide, verification checklist and troubleshooting:
+[docs/POSTGRESQL_DEPLOYMENT.md](docs/POSTGRESQL_DEPLOYMENT.md)
 
 ---
 
