@@ -174,7 +174,15 @@ PAGES: dict[str, Any] = {
 # ---------------------------------------------------------------------------
 # DB connectivity (Phase 0 gate)
 # ---------------------------------------------------------------------------
-url = database_url()
+# Configuration errors are surfaced with their real message. An unhandled
+# exception here is rendered by Streamlit as a redacted traceback, which hides
+# the one line that explains a misconfigured DATABASE_URL.
+try:
+    url: str = database_url()
+except Exception as exc:  # noqa: BLE001 -- surface, don't crash
+    st.error(f"Database configuration error: {exc}")
+    st.stop()
+
 try:
     engine = get_engine(url)
     with engine.connect() as conn:
