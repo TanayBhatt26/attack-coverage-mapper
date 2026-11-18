@@ -12,7 +12,7 @@ It's a Streamlit dashboard that maps MITRE ATT&CK techniques against log-source 
 
 Security teams collect log data but often don't know which ATT&CK techniques their telemetry can actually detect. The mapper bridges that gap by mapping real log sources to ATT&CK techniques, scoring coverage, identifying gaps, and generating hunt queries for undetected techniques.
 
-**Q3. What are the four main views?**
+**Q3. What are the five main views?**
 
 1. **Coverage Overview** — 14-bucket tactic heatmap with per-technique confidence scoring and an estimated-attack-surface panel showing which disabled sources could close which gaps.
 2. **APT Simulation** — Simulate a named APT group (APT29/G0016, APT41/G0096, Lazarus/G0032) against current coverage; see detected vs. missed per technique with greedy marginal-gain acquisition recommendations.
@@ -30,7 +30,7 @@ Four layers:
 1. **Data Layer** — SQLite database (or PostgreSQL via docker-compose) storing ATT&CK STIX data, mapping rules, simulation results, and technique coverage rows.
 2. **Parser Layer** — LogEvent bridge, attack_mapper (tiered matching), mappings I/O, SIEM parsers for 8 log formats (EVTX, syslog, CEF, LEEF, JSON, AWS CloudTrail, Nginx, Zeek).
 3. **Analysis Layer** — coverage_analyzer (load coverage rows, tactic rollup, gap calculation), gap_clustering (KMeans + TF-IDF), simulation (APT attack simulation + recommendations), remediation (evidence-based gap classification).
-4. **Visualization Layer** — Streamlit dashboard with four views (Coverage Overview, APT Simulation, Hunt Queries, Gap Analysis).
+4. **Visualization Layer** — Streamlit dashboard with five views (Coverage Overview, APT Simulation, Hunt Queries, Gap Analysis, Anomaly Detection).
 
 **Q5. What data does the system consume?**
 
@@ -108,7 +108,7 @@ The Detection Rule License 1.1 is SigmaHQ's license for Sigma rules. It requires
 
 **Q14: How is the code tested?**
 
-Pytest with 591 passing tests, 4 failed (integration tests requiring committed golden DB `db/coverage.db`), 7 skipped (network tests).
+Pytest with 626 passing tests, 0 failed, 12 skipped (optional dependencies and a live PostgreSQL target not present in the base environment).
 
 **Q15: How is reproducibility ensured?**
 

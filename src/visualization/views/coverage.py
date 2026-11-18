@@ -112,10 +112,10 @@ def _estimated_addressable_panel(
         build_closable_index,
         calculate_coverage_gaps,
     )
-    from src.parser.mappings_io import load_mappings
+    from src.parser.mappings_io import DEFAULT_MAPPINGS_PATH, load_mappings
 
     with st.spinner("Computing source contributions..."):
-        rules = load_mappings("data/attack_mappings.csv")
+        rules = load_mappings(DEFAULT_MAPPINGS_PATH)
         gaps = calculate_coverage_gaps(rows, rules, config)
         closable_index = build_closable_index(rules, config)
 

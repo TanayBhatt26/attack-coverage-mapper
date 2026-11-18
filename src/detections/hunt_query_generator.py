@@ -40,10 +40,10 @@ from src.analysis.coverage_analyzer import (
     calculate_coverage_gaps,
     load_coverage_rows,
 )
-from src.config_loader import load_config
+from src.config_loader import DEFAULT_CONFIG_PATH, load_config
 from src.database.models import SimulationTechnique, Technique, TechniqueCoverage
 from src.database.session import session_scope
-from src.parser.mappings_io import load_mappings
+from src.parser.mappings_io import DEFAULT_MAPPINGS_PATH, load_mappings
 
 from .hand_written import (
     ATTRIBUTION_LABELS,
@@ -584,9 +584,9 @@ def export_all_queries(
 
     try:
         if config is None:
-            config = load_config("config.yaml")
+            config = load_config(DEFAULT_CONFIG_PATH)
         if rules is None:
-            rules = load_mappings("data/attack_mappings.csv")
+            rules = load_mappings(DEFAULT_MAPPINGS_PATH)
 
         enabled = _enabled_sources(config)
 

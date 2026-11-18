@@ -31,7 +31,7 @@ from src.analysis.remediation import (
     classify_all_gaps,
 )
 from src.database.models import Technique
-from src.parser.mappings_io import load_mappings
+from src.parser.mappings_io import DEFAULT_MAPPINGS_PATH, load_mappings
 from src.visualization.views.styles import inject_css  # noqa: F401
 
 __all__ = ("render_gap_view",)
@@ -195,7 +195,7 @@ def render_gap_view(session: Any, config: dict[str, Any]) -> None:
 
     with st.spinner("Analyzing gaps..."):
         rows = list(load_coverage_rows(session, config))
-        rules = load_mappings("data/attack_mappings.csv")
+        rules = load_mappings(DEFAULT_MAPPINGS_PATH)
         gaps = calculate_coverage_gaps(rows, rules, config)
 
     if not gaps:

@@ -32,6 +32,14 @@ The **ATT&CK Coverage Mapper** transforms your log-source inventory into a quant
 ### Gap Analysis
 ![Gap Analysis](docs/screenshots/gap-analysis-all.png)
 
+### Anomaly Detection
+![Anomaly Detection](docs/screenshots/anomaly-detection.png)
+
+### Configuration toggle
+Toggling a log source in the sidebar recomputes coverage immediately —
+`docs/screenshots/config-toggle-before.png` (zeek enabled, 5.12%) and
+`docs/screenshots/config-toggle-after.png` (zeek disabled, 4.13%).
+
 ---
 
 ## Quick Start
@@ -42,7 +50,7 @@ The **ATT&CK Coverage Mapper** transforms your log-source inventory into a quant
 
 ### Installation
 ```bash
-git clone https://github.com/your-org/attack-coverage-mapper.git
+git clone https://github.com/TanayBhatt26/attack-coverage-mapper.git
 cd attack-coverage-mapper
 python -m venv .venv
 .venv/Scripts/activate    # Linux/macOS: source .venv/bin/activate
@@ -89,6 +97,7 @@ changes stay local.
 ```text
                            STREAMLIT DASHBOARD
       Coverage Overview | APT Simulation | Hunt Queries | Gap Analysis
+                                   | Anomaly Detection
                                     │
                                     ▼
                     ┌──────────────────────────────────────┐
@@ -123,7 +132,7 @@ changes stay local.
 | `src/detections/hunt_query_generator.py` | 3-tier hunt query dispatch (curated > Sigma > generic) |
 | `src/detections/sigma_index.py` | Technique → Sigma rules index |
 | `src/parser/attack_mapper.py` | Tiered mapping with confidence scoring |
-| `src/visualization/views/*.py` | Four dashboard views |
+| `src/visualization/views/*.py` | Five dashboard views |
 
 ---
 
@@ -199,7 +208,7 @@ Full guide, verification checklist and troubleshooting:
 - **Estimated Addressable**: Per-source marginal gain (independent vs baseline)
 
 ### 2. APT Simulation
-- Group picker (G0016 APT29, G0096 APT41, G0032 Lazarus)
+- Group picker (172 groups, default = most impactful)
 - KPIs + per-tactic stacked bars
 - Greedy marginal-gain recommendations
 - Missed technique detail table
@@ -218,6 +227,11 @@ Full guide, verification checklist and troubleshooting:
 - **Tactic Groups**: Traditional ATT&CK tactic buckets
 - **Exploratory KMeans**: Textual similarity clusters (secondary)
 - **All Gaps**: Full table with remediation categories
+
+### 5. Anomaly Detection
+- Isolation Forest over parsed LogEvent feature vectors
+- KPI row (total events, anomalies, anomaly rate) + anomaly-score scatter
+- Synthetic demo data only — see `anomaly_detection` in `config.yaml`
 
 ---
 
@@ -296,7 +310,7 @@ Each gap is classified into one category:
 ## Testing
 
 ```bash
-# Full suite (595 passed, 0 failed, 7 skipped)
+# Full suite (626 passed, 12 skipped)
 PYTHONPATH=src .venv/Scripts/python.exe -m pytest -q
 
 # Core tests only (excludes golden-data integration)
@@ -312,17 +326,18 @@ PYTHONPATH=src .venv/Scripts/python.exe scripts/validate_coverage.py
 
 ```bash
 # Clean clone test
-git clone https://github.com/your-org/attack-coverage-mapper.git
+git clone https://github.com/TanayBhatt26/attack-coverage-mapper.git
 cd attack-coverage-mapper
 python -m venv .venv
 .venv/Scripts/activate
 pip install -r requirements.txt
 PYTHONPATH=src python -m pytest -q
-# Expected: 595 passed, 0 failed, 7 skipped
+# Expected: 626 passed, 12 skipped
 ```
 
-All tests pass on a fully populated clone. The 7 skipped tests require optional dependencies
-not installed in the base environment (diskcache, Playwright).
+All tests pass on a fully populated clone. The 12 skipped tests require optional
+dependencies or a live PostgreSQL target not present in the base environment
+(diskcache, Playwright, `TEST_POSTGRES_URL`).
 
 ---
 
@@ -349,6 +364,6 @@ If you use this work, please cite:
   title = {ATT&CK Coverage Mapper},
   author = {Tanay Bhatt},
   year = {2026},
-  url = {https://github.com/your-org/attack-coverage-mapper}
+  url = {https://github.com/TanayBhatt26/attack-coverage-mapper}
 }
 ```

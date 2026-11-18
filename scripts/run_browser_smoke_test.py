@@ -1,29 +1,44 @@
 #!/usr/bin/env python
 """
-Browser Smoke Test for ATT&CK Coverage Mapper.
+Browser smoke test + screenshot capture for the ATT&CK Coverage Mapper.
 
-Runs through all four views and verifies they render correctly.
-Captures screenshots at 1920x1080, 1366x768 and 1280x720.
+Saves the canonical filenames referenced by README.md and
+docs/SCREENSHOT_CAPTURE_GUIDE.md (``coverage-overview.png`` etc.) at
+1600x1000, and re-checks rendering at 1366x768 and 1280x720 without
+overwriting them.
+
+Start the dashboard first, then run this from the repo root:
+
+    PYTHONPATH=src .venv/Scripts/python.exe -m streamlit run src/visualization/app.py
+    .venv/Scripts/python.exe scripts/run_browser_smoke_test.py
 """
+import shutil
 import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SCREENSHOT_DIR = PROJECT_ROOT / "docs" / "screenshots"
 SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
+CONFIG_PATH = PROJECT_ROOT / "config.yaml"
+CONFIG_BACKUP = PROJECT_ROOT / "config.yaml.smoketest.bak"
 
-# Desktop viewports to validate responsive behaviour.
-VIEWPORTS = [
-    (1920, 1080, "1080p"),
-    (1366, 768, "768p"),
-    (1280, 720, "720p"),
-]
+#: Viewport used for the committed screenshots.
+CANONICAL = (1600, 1000)
+#: Extra viewports checked for responsive behaviour only.
+CHECK_ONLY = [(1366, 768), (1280, 720)]
 
-RESULTS = {}
+#: Sidebar checkboxes render alphabetically; zeek is the last of eight.
+ZEEK_INDEX = 7
+
+CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+BASE_URL = "http://localhost:8501"
+
+RESULTS: dict[str, dict[str, bool]] = {}
 
 
-def take_screenshot(page, name, width, height):
-    path = SCREENSHOT_DIR / f"{name}_{width}x{height}.png"
+def take_screenshot(page, name: str) -> str:
+    """Capture the canonical filename (no viewport suffix)."""
+    path = SCREENSHOT_DIR / f"{name}.png"
     page.screenshot(path=str(path), full_page=True)
     print(f"  Screenshot saved: {path}")
     return str(path)
@@ -61,7 +76,7 @@ def test_coverage_overview(page, width, height):
         results[f"kpi_{kpi_text}"] = _check_text(page, f"KPI {kpi_text}", kpi_text)
     results["heatmap"] = _check(page, "Plotly heatmap", ".plotly")
 
-    take_screenshot(page, "coverage-overview", width, height)
+    take_screenshot(page, "coverage-overview")
     RESULTS[f"coverage_overview_{width}x{height}"] = results
     return results
 
@@ -140,7 +155,7 @@ def test_apt_simulation(page, width, height):
     results["recommendations"] = _check(page, "Recommendations", "text=Recommended next sources")
     results["missed_expander"] = _check(page, "Missed techniques expander", "text=Missed techniques")
 
-    take_screenshot(page, "apt-simulation", width, height)
+    take_screenshot(page, "apt-simulation")
     RESULTS[f"apt_simulation_{width}x{height}"] = results
     return results
 
@@ -183,7 +198,7 @@ def test_hunt_queries(page, width, height):
     except Exception as e:
         print(f"  [FAIL] Expander test error: {e}")
 
-    take_screenshot(page, "hunt-queries", width, height)
+    take_screenshot(page, "hunt-queries")
     RESULTS[f"hunt_queries_{width}x{height}"] = results
     return results
 
@@ -202,47 +217,61 @@ def test_gap_analysis(page, width, height):
         results[f"tab_{tab.lower().replace(' ', '_')}"] = _check(page, f"Tab {tab}", f"text={tab}", timeout=3000)
         page.wait_for_timeout(1500)
 
-    take_screenshot(page, "gap-analysis-all", width, height)
+    take_screenshot(page, "gap-analysis-all")
     RESULTS[f"gap_analysis_{width}x{height}"] = results
+
+    # Anomaly Detection (fifth view).
+    print(f"\n=== Test 5: Anomaly Detection ({width}x{height}) ===")
+    page.click("text=Anomaly Detection")
+    page.wait_for_timeout(4000)
+    results["anomaly_page_title"] = _check(page, "Page title", "text=Anomaly Detection")
+    results["anomaly_rate"] = _check_text(page, "Anomaly rate", "Anomaly rate")
+    take_screenshot(page, "anomaly-detection")
+    RESULTS[f"anomaly_detection_{width}x{height}"] = results
     return results
 
 
 def test_config_sidebar(page, width, height):
-    """Test Config Sidebar toggle of zeek."""
-    print(f"\n=== Test 5: Config Sidebar ({width}x{height}) ===")
+    """Capture the zeek on/off pair, then restore the checkbox.
+
+    ``config-toggle-before`` is zeek ENABLED (the default) and
+    ``config-toggle-after`` is zeek DISABLED.  The previous version captured
+    them in the opposite order.
+    """
+    print(f"\n=== Test 6: Config Sidebar ({width}x{height}) ===")
     results = {}
     page.click("text=Coverage Overview")
     page.wait_for_timeout(2000)
 
-    results["toggle_off"] = False
-    try:
-        page.click("text=zeek")
-        page.wait_for_timeout(3000)
-        print("  [PASS] zeek checkbox clicked")
-        results["toggle_off"] = True
-        take_screenshot(page, "config-toggle-before", width, height)
-    except Exception:
-        print("  [FAIL] Could not toggle zeek")
+    expander = page.locator('[data-testid="stExpander"]').filter(has_text="Configuration")
+    expander.first.locator("summary").click()
+    page.wait_for_timeout(3000)
 
-    results["coverage_updated"] = False
-    try:
-        page.wait_for_timeout(2000)
-        page_text = page.text_content("body")
-        if "coverage" in page_text.lower():
-            print("  [PASS] Coverage page still accessible after toggle")
-            results["coverage_updated"] = True
-    except Exception:
-        print("  [FAIL] Coverage not accessible after toggle")
+    zeek = page.locator('[data-testid="stCheckbox"]').nth(ZEEK_INDEX)
+    before = zeek.locator("label").first.get_attribute("data-selected")
+    print(f"  zeek before  : {before}")
+    take_screenshot(page, "config-toggle-before")
 
-    results["toggle_back_on"] = False
     try:
-        page.click("text=zeek")
-        page.wait_for_timeout(3000)
-        print("  [PASS] zeek toggled back on")
-        results["toggle_back_on"] = True
-        take_screenshot(page, "config-toggle-after", width, height)
-    except Exception:
-        print("  [FAIL] Could not toggle zeek back on")
+        zeek.click()
+        page.wait_for_timeout(7000)
+        after = zeek.locator("label").first.get_attribute("data-selected")
+        print(f"  zeek after   : {after}")
+        results["toggle_off"] = after != before
+        take_screenshot(page, "config-toggle-after")
+    except Exception as exc:
+        print(f"  [FAIL] Could not toggle zeek: {exc}")
+        results["toggle_off"] = False
+
+    try:
+        zeek.click()
+        page.wait_for_timeout(7000)
+        restored = zeek.locator("label").first.get_attribute("data-selected")
+        print(f"  zeek restored: {restored}")
+        results["toggle_back_on"] = restored == before
+    except Exception as exc:
+        print(f"  [FAIL] Could not restore zeek: {exc}")
+        results["toggle_back_on"] = False
 
     RESULTS[f"config_sidebar_{width}x{height}"] = results
     return results
@@ -255,32 +284,46 @@ def main():
 
     from playwright.sync_api import sync_playwright
 
-    chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+    # The config toggle rewrites config.yaml; keep the original and restore it.
+    shutil.copyfile(CONFIG_PATH, CONFIG_BACKUP)
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                executable_path=CHROME,
+                headless=True,
+                args=["--no-sandbox", "--disable-dev-shm-usage"],
+            )
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(
-            executable_path=chrome_path,
-            headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage"],
-        )
-
-        for width, height, label in VIEWPORTS:
+            width, height = CANONICAL
             context = browser.new_context(viewport={"width": width, "height": height})
             page = context.new_page()
-
-            print(f"\n{'='*60}\nViewport: {width}x{height} ({label})\n{'='*60}")
-            page.goto("http://localhost:8501", wait_until="networkidle")
-            page.wait_for_timeout(3000)
+            print(f"\n{'='*60}\nCapturing at {width}x{height}\n{'='*60}")
+            page.goto(BASE_URL, wait_until="networkidle")
+            page.wait_for_timeout(4000)
 
             test_coverage_overview(page, width, height)
             test_apt_simulation(page, width, height)
             test_hunt_queries(page, width, height)
             test_gap_analysis(page, width, height)
             test_config_sidebar(page, width, height)
-
             context.close()
 
-        browser.close()
+            for chk_w, chk_h in CHECK_ONLY:
+                print(f"\n{'='*60}\nResponsive check {chk_w}x{chk_h}\n{'='*60}")
+                chk = browser.new_context(viewport={"width": chk_w, "height": chk_h})
+                chk_page = chk.new_page()
+                chk_page.goto(BASE_URL, wait_until="networkidle")
+                chk_page.wait_for_timeout(4000)
+                RESULTS[f"responsive_{chk_w}x{chk_h}"] = {
+                    "renders": _check(chk_page, "KPI row", "text=5.12%", 8000),
+                }
+                chk.close()
+
+            browser.close()
+    finally:
+        shutil.copyfile(CONFIG_BACKUP, CONFIG_PATH)
+        CONFIG_BACKUP.unlink(missing_ok=True)
+        print("\nconfig.yaml restored from backup")
 
     print("\n" + "=" * 60)
     print("BROWSER SMOKE TEST COMPLETE")

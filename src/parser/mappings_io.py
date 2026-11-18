@@ -37,8 +37,15 @@ import csv
 import dataclasses
 import logging
 import re
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
+
+#: Repository-root-relative location of the curated mapping rules. Resolved
+#: from this file rather than the process CWD, so the dashboard keeps working
+#: no matter which directory Streamlit was launched from.
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_MAPPINGS_PATH = _REPO_ROOT / "data" / "attack_mappings.csv"
 
 #: Log formats accepted in the ``source_format`` column; mirrors the
 #: parsers exposed by :mod:`parser.siem_parsers`.
@@ -227,7 +234,7 @@ def _build_rule(cells: dict[str, str], prefix: str) -> MappingRule:
     )
 
 
-def load_mappings(path: str) -> list[MappingRule]:
+def load_mappings(path: str | Path) -> list[MappingRule]:
     """Load and strictly validate mapping rules from a CSV file.
 
     The file must start with a header carrying exactly the 14 expected

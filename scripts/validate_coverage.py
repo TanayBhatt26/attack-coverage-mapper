@@ -24,16 +24,16 @@ if str(SRC_PATH) not in sys.path:
 from sqlalchemy import select
 from database.session import session_scope
 from database.models import Technique
-from config_loader import load_config
+from config_loader import DEFAULT_CONFIG_PATH, load_config
 from analysis.coverage_analyzer import load_coverage_rows, calculate_coverage_gaps
-from parser.mappings_io import load_mappings
+from parser.mappings_io import DEFAULT_MAPPINGS_PATH, load_mappings
 
 
 def generate_report() -> dict:
     """Generate the complete validation report as a dict."""
     with session_scope() as session:
-        config = load_config("config.yaml")
-        rules = load_mappings("data/attack_mappings.csv")
+        config = load_config(DEFAULT_CONFIG_PATH)
+        rules = load_mappings(DEFAULT_MAPPINGS_PATH)
         rows = list(load_coverage_rows(session, config))
 
         # Basic counts
@@ -56,7 +56,7 @@ def generate_report() -> dict:
         ).all()}
 
         # Gaps
-        gaps = list(calculate_coverage_gaps(rows, load_mappings("data/attack_mappings.csv"), load_config("config.yaml")))
+        gaps = list(calculate_coverage_gaps(rows, load_mappings(DEFAULT_MAPPINGS_PATH), load_config(DEFAULT_CONFIG_PATH)))
         gaps_with_closable = [g for g in gaps if g.closable_by]
         gaps_no_closable = [g for g in gaps if not g.closable_by]
 

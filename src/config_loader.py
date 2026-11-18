@@ -28,10 +28,16 @@ Missing keys fall back to sane defaults; a missing config file raises
 """
 
 import logging
+from pathlib import Path
 
 import yaml
 
 logger = logging.getLogger(__name__)
+
+#: Repository-root-relative default config location. Resolved from this file
+#: rather than the process CWD so callers that omit the path keep working no
+#: matter which directory they were launched from.
+DEFAULT_CONFIG_PATH = Path(__file__).resolve().parents[1] / "config.yaml"
 
 # Parser formats supported by siem-log-parser; all enabled unless the
 # config says otherwise.
@@ -234,7 +240,7 @@ def _normalize_clustering(value: object) -> dict[str, int | float]:
     }
 
 
-def load_config(path: str = "config.yaml") -> dict[str, object]:
+def load_config(path: str | Path = DEFAULT_CONFIG_PATH) -> dict[str, object]:
     """Load and normalize the application configuration from a YAML file.
 
     Args:
