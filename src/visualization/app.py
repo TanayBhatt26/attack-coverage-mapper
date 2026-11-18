@@ -52,12 +52,15 @@ inject_css()
 def get_engine(url: str):
     """Validate URL scheme and create engine."""
     from sqlalchemy.engine import make_url
+
+    from database.session import DRIVER_ALIASES
+
     try:
         parsed = make_url(url)
-        if parsed.drivername not in ("sqlite", "postgresql+psycopg", "sqlite+pysqlite"):
+        if parsed.drivername not in DRIVER_ALIASES:
             raise ValueError(f"unsupported database driver: {parsed.drivername}")
     except Exception as exc:
-        raise ValueError(f"invalid database URL: {exc}") from exc
+        raise ValueError(f"invalid DATABASE_URL: {exc}") from exc
     return make_engine(url)
 
 

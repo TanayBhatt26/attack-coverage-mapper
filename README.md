@@ -176,13 +176,15 @@ Streamlit Cloud Secrets:
 
 ```toml
 APP_ENV = "production"
-DATABASE_URL = "postgresql+psycopg://user:password@host:5432/dbname"
+DATABASE_URL = "postgresql://user:password@host:5432/dbname?sslmode=require"
 ```
 
-The migration is atomic, never drops anything, refuses a target that already
-holds data, and re-synchronises the identity sequences so new simulations get
-`max(id) + 1`. Local development is unaffected: with `APP_ENV` unset the app
-still uses `db/coverage.db`.
+Neon's console copies a bare `postgresql://` string; that is accepted as-is (it
+is resolved to psycopg 3 for you), so paste it verbatim and keep the query
+string. The migration is atomic, never drops anything, refuses a target that
+already holds data, and re-synchronises the identity sequences so new
+simulations get `max(id) + 1`. Local development is unaffected: with `APP_ENV`
+unset the app still uses `db/coverage.db`.
 
 Full guide, verification checklist and troubleshooting:
 [docs/POSTGRESQL_DEPLOYMENT.md](docs/POSTGRESQL_DEPLOYMENT.md)

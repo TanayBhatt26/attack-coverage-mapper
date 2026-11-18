@@ -119,6 +119,25 @@ class TestDatabaseUrl:
         with pytest.raises(ValueError, match="unsupported database driver"):
             database_url()
 
+    def test_bare_postgresql_alias_selects_psycopg(self, monkeypatch):
+        """Neon hands you `postgresql://`; accept it instead of failing later."""
+        monkeypatch.setenv("DATABASE_URL", "postgresql://u:p@host:5432/coverage")
+        assert database_url() == "postgresql+psycopg://u:p@host:5432/coverage"
+
+    def test_production_accepts_the_bare_postgresql_alias(self, monkeypatch):
+        monkeypatch.setenv("DATABASE_URL", "postgresql://u:p@host:5432/coverage")
+        monkeypatch.setenv("APP_ENV", "production")
+        assert database_url() == "postgresql+psycopg://u:p@host:5432/coverage"
+
+    def test_postgres_scheme_alias_is_accepted(self, monkeypatch):
+        monkeypatch.setenv("DATABASE_URL", "postgres://u:p@host:5432/coverage")
+        assert database_url() == "postgresql+psycopg://u:p@host:5432/coverage"
+
+    def test_sqlite_urls_are_not_rewritten(self, monkeypatch):
+        """The SQLite default and its directory helper rely on `sqlite://`."""
+        monkeypatch.setenv("DATABASE_URL", "sqlite:///db/coverage.db")
+        assert database_url() == "sqlite:///db/coverage.db"
+
 
 class TestVerifySchema:
     """The empty/wrong-database guard."""

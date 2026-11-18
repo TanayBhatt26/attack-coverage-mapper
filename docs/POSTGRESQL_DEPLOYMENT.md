@@ -126,8 +126,13 @@ equivalent to:
 
 ```toml
 APP_ENV = "production"
-DATABASE_URL = "postgresql+psycopg://user:password@host:5432/dbname"
+DATABASE_URL = "postgresql://user:password@host:5432/dbname?sslmode=require"
 ```
+
+Both `postgresql://` (what Neon's console copies) and `postgresql+psycopg://`
+are accepted — the bare form is resolved to psycopg 3 automatically, so paste
+the connection string exactly as Neon shows it. Keep the query string
+(`?sslmode=require`, `&channel_binding=require`) intact.
 
 Then redeploy. On startup the sidebar should read:
 

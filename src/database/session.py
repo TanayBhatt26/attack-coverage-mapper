@@ -42,8 +42,25 @@ def _ensure_dotenv_loaded() -> None:
 
 DEFAULT_URL = "sqlite:///db/coverage.db"
 
-#: Drivers the application is allowed to talk to.
-SUPPORTED_DRIVERS = ("sqlite", "postgresql+psycopg", "sqlite+pysqlite")
+#: Drivers the application accepts, mapped to the driver actually loaded.
+#:
+#: Neon and most hosted Postgres consoles hand you a bare ``postgresql://``
+#: URL. SQLAlchemy resolves that to psycopg2, which this project does not
+#: install (requirements pin ``psycopg[binary]``, i.e. psycopg 3). Accept the
+#: alias and select psycopg explicitly rather than making the operator edit the
+#: URL by hand -- a step that is easy to miss and fails only at connect time.
+DRIVER_ALIASES = {
+    "postgresql": "postgresql+psycopg",
+    "postgres": "postgresql+psycopg",
+    "postgresql+psycopg": "postgresql+psycopg",
+    # Identity entries: accepted, but never rewritten (the SQLite default URL
+    # and its directory bootstrap depend on the `sqlite://` prefix).
+    "sqlite": "sqlite",
+    "sqlite+pysqlite": "sqlite+pysqlite",
+}
+
+#: Backwards-compatible alias for callers that used the old name.
+SUPPORTED_DRIVERS = tuple(DRIVER_ALIASES)
 
 #: Deployment environment markers (see module docstring).
 DEVELOPMENT = "development"
@@ -104,8 +121,15 @@ def database_url() -> str:
         parsed = make_url(url)
     except Exception as exc:
         raise ValueError(f"invalid DATABASE_URL: {exc}") from exc
-    if parsed.drivername not in SUPPORTED_DRIVERS:
+    canonical = DRIVER_ALIASES.get(parsed.drivername)
+    if canonical is None:
         raise ValueError(f"unsupported database driver: {parsed.drivername}")
+    if canonical != parsed.drivername:
+        # Re-render with the driver SQLAlchemy should actually load. The
+        # password is preserved (hide_password=False) -- this string is handed
+        # back to create_engine, never displayed.
+        url = parsed.set(drivername=canonical).render_as_string(hide_password=False)
+        parsed = make_url(url)
 
     if env == PRODUCTION and parsed.drivername != "postgresql+psycopg":
         raise RuntimeError(
