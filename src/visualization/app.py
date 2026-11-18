@@ -16,9 +16,16 @@ from typing import Any
 
 # Entry-point path bootstrap so `database`/`src` resolve when Streamlit runs
 # this file directly (acceptable here; library modules never do this).
-SRC = Path(__file__).resolve().parents[2]
-if str(SRC) not in sys.path:
-    sys.path.insert(0, str(SRC))
+#
+# BOTH roots are required: `database.*` lives under src/, while `src.*` needs
+# the repository root. Streamlit Cloud runs this file with neither on sys.path
+# and no PYTHONPATH, so adding only one of them fails at import time -- a
+# regression that has already shipped twice (parents[1] broke `src.*`, then
+# parents[2] broke `database.*`). Keep both.
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+for _path in (_REPO_ROOT, _REPO_ROOT / "src"):
+    if str(_path) not in sys.path:
+        sys.path.insert(0, str(_path))
 
 import streamlit as st  # noqa: E402
 from sqlalchemy import select, text  # noqa: E402
@@ -33,7 +40,7 @@ from database.session import (  # noqa: E402
 from src.config_loader import load_config  # noqa: E402
 from src.visualization.views.styles import inject_css  # noqa: E402
 
-CONFIG_PATH = str(Path(__file__).resolve().parents[2] / "config.yaml")
+CONFIG_PATH = str(_REPO_ROOT / "config.yaml")
 
 st.set_page_config(page_title="ATT&CK Coverage Mapper", layout="wide")
 
