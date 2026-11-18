@@ -430,6 +430,13 @@ def main(argv: list[str] | None = None) -> int:
             postgres_url.rsplit("@", 1)[-1],
         )
         return EXIT_OPERATIONAL
+    # Hosted consoles copy a bare `postgresql://` string; SQLAlchemy resolves
+    # that to psycopg2, which this project does not install. Select psycopg 3.
+    for _scheme in ("postgresql", "postgres"):
+        _prefix = f"{_scheme}://"
+        if postgres_url.startswith(_prefix):
+            postgres_url = "postgresql+psycopg://" + postgres_url[len(_prefix):]
+            break
     if not _is_sqlite(args.sqlite_url):
         logger.error("refusing to migrate from non-SQLite source %s", args.sqlite_url)
         return EXIT_OPERATIONAL
