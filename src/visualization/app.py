@@ -10,6 +10,7 @@ Run from repo root:  streamlit run src/visualization/app.py
 from __future__ import annotations
 
 import contextlib
+import os
 import sys
 from pathlib import Path
 from typing import Any
@@ -37,7 +38,6 @@ try:
     from sqlalchemy.orm import Session
 
     from database.session import (
-        BUILD_TAG,
         database_url,
         make_engine,
         session_scope,
@@ -56,6 +56,37 @@ except Exception as exc:  # noqa: BLE001 -- a deploy must explain itself
         "beside a new one. Rebuild the app, then hard-refresh the page."
     )
     st.stop()
+
+try:
+    from database.session import BUILD_TAG
+except ImportError:
+    # The deployed database module predates the marker, i.e. the host is
+    # serving a stale file. Say so rather than hiding it.
+    BUILD_TAG = "stale-deploy"
+
+
+def _normalise_database_url_env() -> None:
+    """Rewrite a bare ``postgresql://`` URL to ``postgresql+psycopg://``.
+
+    Hosted consoles (Neon included) copy a ``postgresql://`` connection string.
+    SQLAlchemy resolves that scheme to psycopg2, which this project does not
+    install, so it must become ``postgresql+psycopg://`` before
+    :func:`database.session.database_url` validates it.
+
+    Done here as well as in ``database.session`` because the entry point is the
+    one file that is guaranteed to redeploy: if the host serves a stale
+    ``database/session.py``, the scheme is still corrected and the app still
+    starts. Idempotent, and only touches the environment.
+    """
+    raw = os.environ.get("DATABASE_URL", "")
+    for scheme in ("postgresql", "postgres"):
+        prefix = f"{scheme}://"
+        if raw.startswith(prefix):
+            os.environ["DATABASE_URL"] = "postgresql+psycopg://" + raw[len(prefix):]
+            return
+
+
+_normalise_database_url_env()
 
 CONFIG_PATH = str(_REPO_ROOT / "config.yaml")
 
