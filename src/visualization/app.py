@@ -244,6 +244,7 @@ except Exception as exc:  # noqa: BLE001 -- surface, don't crash
 
 # Serverless Postgres can drop the first connection while its compute wakes.
 # Retry a few times before declaring the database unreachable.
+connected = False
 last_error: Exception | None = None
 for _attempt in range(1, _CONNECT_ATTEMPTS + 1):
     try:
