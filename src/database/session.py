@@ -62,6 +62,11 @@ DRIVER_ALIASES = {
 #: Backwards-compatible alias for callers that used the old name.
 SUPPORTED_DRIVERS = tuple(DRIVER_ALIASES)
 
+#: Release marker rendered in the dashboard sidebar. Bump it whenever the
+#: database contract changes, so a deployed app can be identified at a glance
+#: instead of inferring it from line numbers in a traceback.
+BUILD_TAG = "2026-11-18-driver-alias-v3"
+
 #: Deployment environment markers (see module docstring).
 DEVELOPMENT = "development"
 PRODUCTION = "production"

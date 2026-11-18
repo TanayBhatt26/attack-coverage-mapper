@@ -32,6 +32,7 @@ from sqlalchemy import select, text  # noqa: E402
 from sqlalchemy.orm import Session  # noqa: E402
 
 from database.session import (  # noqa: E402
+    BUILD_TAG,
     database_url,
     make_engine,
     session_scope,
@@ -196,6 +197,10 @@ except Exception as exc:  # noqa: BLE001 -- surface, don't crash
     connected = False
     st.error(f"Database connection failed: {exc}")
     engine = None  # type: ignore[assignment]
+
+# Visible in both the connected and failed states, so a deploy can be
+# identified without reading logs.
+st.caption(f"build `{BUILD_TAG}`")
 
 if connected:
     try:
