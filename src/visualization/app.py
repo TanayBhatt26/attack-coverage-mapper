@@ -12,6 +12,7 @@ from __future__ import annotations
 import contextlib
 import os
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -98,6 +99,9 @@ _ALLOWED_DATABASE_DRIVERS = (
     "postgres",
     "postgresql+psycopg",
 )
+
+#: Connection attempts before the startup probe gives up.
+_CONNECT_ATTEMPTS = 3
 
 CONFIG_PATH = str(_REPO_ROOT / "config.yaml")
 
@@ -238,19 +242,32 @@ except Exception as exc:  # noqa: BLE001 -- surface, don't crash
     st.error(f"Database configuration error: {exc}")
     st.stop()
 
-try:
-    engine = get_engine(url)
-    with engine.connect() as conn:
-        conn.execute(text("SELECT 1"))
-    # `SELECT 1` only proves the server is awake. Verify the application schema
-    # too, so an empty or wrong database fails loudly instead of rendering a
-    # blank dashboard (the Streamlit Cloud failure this guard exists for).
-    verify_schema(engine)
-    connected = True
-except Exception as exc:  # noqa: BLE001 -- surface, don't crash
-    connected = False
-    st.error(f"Database connection failed: {exc}")
-    engine = None  # type: ignore[assignment]
+# Serverless Postgres can drop the first connection while its compute wakes.
+# Retry a few times before declaring the database unreachable.
+last_error: Exception | None = None
+for _attempt in range(1, _CONNECT_ATTEMPTS + 1):
+    try:
+        engine = get_engine(url)
+        with engine.connect() as conn:
+            conn.execute(text("SELECT 1"))
+        # `SELECT 1` only proves the server is awake. Verify the application
+        # schema too, so an empty or wrong database fails loudly instead of
+        # rendering a blank dashboard (the Streamlit Cloud failure this guard
+        # exists for).
+        verify_schema(engine)
+        connected = True
+        break
+    except Exception as exc:  # noqa: BLE001 -- surface, don't crash
+        last_error = exc
+        engine = None  # type: ignore[assignment]
+        if _attempt < _CONNECT_ATTEMPTS:
+            time.sleep(2 * _attempt)
+
+if not connected:
+    st.error(
+        f"Database connection failed after {_CONNECT_ATTEMPTS} attempts: "
+        f"{last_error}"
+    )
 
 # Visible in both the connected and failed states, so a deploy can be
 # identified without reading logs.

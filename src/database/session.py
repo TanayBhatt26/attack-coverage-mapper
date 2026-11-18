@@ -163,6 +163,12 @@ def make_engine(url: str | None = None):
     kwargs = {}
     if url.startswith("sqlite"):
         kwargs["connect_args"] = {"check_same_thread": False}
+    else:
+        # Serverless Postgres suspends its compute when idle and can drop the
+        # first connection of a wake-up. Validate pooled connections before
+        # use and allow a slow cold start instead of failing the render.
+        kwargs["pool_pre_ping"] = True
+        kwargs["connect_args"] = {"connect_timeout": 20}
     return create_engine(url, **kwargs)
 
 
