@@ -88,6 +88,17 @@ def _normalise_database_url_env() -> None:
 
 _normalise_database_url_env()
 
+#: Driver schemes the entry point accepts. Kept local (rather than imported from
+#: ``database.session``) so startup does not depend on that module being
+#: current -- see :func:`_normalise_database_url_env`.
+_ALLOWED_DATABASE_DRIVERS = (
+    "sqlite",
+    "sqlite+pysqlite",
+    "postgresql",
+    "postgres",
+    "postgresql+psycopg",
+)
+
 CONFIG_PATH = str(_REPO_ROOT / "config.yaml")
 
 # Inject shared CSS
@@ -99,11 +110,9 @@ def get_engine(url: str):
     """Validate URL scheme and create engine."""
     from sqlalchemy.engine import make_url
 
-    from database.session import DRIVER_ALIASES
-
     try:
         parsed = make_url(url)
-        if parsed.drivername not in DRIVER_ALIASES:
+        if parsed.drivername not in _ALLOWED_DATABASE_DRIVERS:
             raise ValueError(f"unsupported database driver: {parsed.drivername}")
     except Exception as exc:
         raise ValueError(f"invalid DATABASE_URL: {exc}") from exc
