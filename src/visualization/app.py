@@ -28,22 +28,36 @@ for _path in (_REPO_ROOT, _REPO_ROOT / "src"):
         sys.path.insert(0, str(_path))
 
 import streamlit as st  # noqa: E402
-from sqlalchemy import select, text  # noqa: E402
-from sqlalchemy.orm import Session  # noqa: E402
 
-from database.session import (  # noqa: E402
-    BUILD_TAG,
-    database_url,
-    make_engine,
-    session_scope,
-    verify_schema,
-)
-from src.config_loader import load_config  # noqa: E402
-from src.visualization.views.styles import inject_css  # noqa: E402
+# Must be the first Streamlit command; Streamlit asserts on this.
+st.set_page_config(page_title="ATT&CK Coverage Mapper", layout="wide")
+
+try:
+    from sqlalchemy import select, text
+    from sqlalchemy.orm import Session
+
+    from database.session import (
+        BUILD_TAG,
+        database_url,
+        make_engine,
+        session_scope,
+        verify_schema,
+    )
+    from src.config_loader import load_config
+    from src.visualization.views.styles import inject_css
+except Exception as exc:  # noqa: BLE001 -- a deploy must explain itself
+    # Streamlit renders an unhandled module-level exception with the message
+    # redacted, which hides the one line that explains a broken deploy. Show
+    # it instead.
+    st.error(
+        "Startup failed while importing the application modules:\n\n"
+        f"```\n{type(exc).__name__}: {exc}\n```\n\n"
+        "This usually means the deployed tree is inconsistent -- an old module "
+        "beside a new one. Rebuild the app, then hard-refresh the page."
+    )
+    st.stop()
 
 CONFIG_PATH = str(_REPO_ROOT / "config.yaml")
-
-st.set_page_config(page_title="ATT&CK Coverage Mapper", layout="wide")
 
 # Inject shared CSS
 inject_css()
